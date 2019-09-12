@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator wiązań narciarskich</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet v4.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="hamburger.css" />	
+	</head>
+<body>
+	<!--nagłówek-->
+	<header>
+		<nav class="box1">
+			<h4>Kalkulator wiązań narciarskich</h4> 
+			<button class="hamburger">
+				<span class="hamburgerBox">
+				  <span class="hamburgerIn"></span>
+				</span>
+				<script src="hamburger.js"></script>
+			  </button>
+		</nav>
+	</header>
+	<main>
+		<!--obliczenia-->
+		<div class="container">
+			<div class="box2">	
+				<h3>W celu rozwiania wątpliwości w sferze swoich umiejętności, zerknij na rozpiskę.</h3>
+				<ul class="people">
+					<li class="person"><b>Świeżak</b> - pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie jesteś zbyt nachalny w tych oczekiwaniach.</li>
+					<li class="person"><b>Niedzielny Janusz</b> - ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i dziczysz aż do otwartego złamania.</li>
+					<li class="person"><b>Zwykły ludź</b> - pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii i ciśniesz na Biały krzyż.</li>
+					<li class="person"><b>Dzik</b> - parę razy byłeś na tyczkach ale się wyjebałeś. Wkurwiasz sie na januszy co blokują Golgotę jadąc ześlizgiem.</li>
+					<li class="person"><b>Turbodzik</b> - nakurwiasz slalom jak pojebany. Kasprowy to Świnto	 Góro i umisz skręcać z karwinga.</li>
+				</ul>
+			</div>
+			<div class="box3">
+				<ul class="levels">
+					<li><button class="level" style="background: #98DD54"><b>ŚWIEŻAK</b></button></li>
+					<li><button class="level" style="background: #5CDF79"><b>NIEDZIELNY JANUSZ</b></button></li>
+					<li><button class="level" style="background: #4FF2E8"><b>ZWYKŁY LUDŹ</b></button></li>
+					<li><button class="level" style="background: #4FAEF2"><b>DZIK</b></button></li>
+					<li><button class="level" style="background: #3C74E1"><b>TURBODZIK</b></button></li>
+				</ul>
+			</div>
+			<div class="box4">
+				<p id="param">WZROST</p>
+				<p id="param">WAGA</p>
+				<p id="param">DŁUGOŚĆ BUTA</p>
+				<p id="param">WIEK</p>
+			</div>
+			<div class="box5">
+				<div><select class="height">
+					<option class="148">0-148 cm</option>
+					<option class="157">149-157 cm</option>
+					<option class="166">158-166 cm</option>
+					<option class="178">167-178 cm</option>
+					<option class="194">179-194 cm</option>
+					<option class="195">195+ cm</option>
+				</select></div>
+				<div><select class="weight">
+					<option class="13">10-13 kg</option>
+					<option class="17">14-17 kg</option>
+					<option class="21">18-21 kg</option>
+					<option class="25">22-25 kg</option>
+					<option class="30">26-30 kg</option>
+					<option class="35">30-35 kg</option>
+					<option class="41">36-41 kg</option>
+					<option class="48">42-48 kg</option>
+					<option class="57">49-57 kg</option>
+					<option class="66">58-66 kg</option>
+					<option class="78">67-78 kg</option>
+					<option class="94">79-94 kg</option>
+					<option class="95">95+ kg</option>
+				</select></div>
+				<div><select class="length">
+					<option class="230">0-230 mm</option>
+					<option class="250">231-250 mm</option>
+					<option class="270">251-270 mm</option>
+					<option class="290">271-290 mm</option>
+					<option class="310">291-310 mm</option>
+					<option class="330">311-330 mm</option>
+					<option class="350">331-350 mm</option>
+					<option class="351">351+ mm</option>
+				</select></div>
+				<div><select class="age">
+					<option class="9">0-9 lat</option>
+					<option class="250">10-49 lat</option>
+					<option class="270">50+ lat</option>
+				</select></div>
+			</div>
+		</div>
+		<div class="container2">
+			<div class="box6">
+				<h3>Pozor!</h3></br>
+				Wartości tutaj obliczone są wartościami teoretycznymi.</br></br>
+				Wynika to z faktu, iż sprężyny w wiązaniach wraz z upływem czasu zmieniają swoje parametry.</br></br>
+				Obliczona tutaj wartość może być niewystarczająca z uwagi na zużycie wiązania.</br></br>
+				W celu dokladnego sprawdzenia potrzebnej siły wypięcia polecam udać się do porządnego serwisu, gdzie przy pomocy maszyny ustala się siłę wypięcia.</br></br>
+				Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania kulfona więc polecam pochylić się nad tematem. </br></br>
+			</div>	
+			<div class="box7">
+				<p id="result">OBLICZ</p>
+				<output class="result">WYNIK</output>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+<!--
+	1. ogarnąć do końca tło czerwone
+	2. hamburger menu 
+	3. selecty zrobić jednego rozmiaru
+	4. poprawić responsywnośc 
+	fsdvsdvsd
+-->
