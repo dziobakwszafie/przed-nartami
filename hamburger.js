@@ -1,7 +1,22 @@
-const hamburger = document.querySelector('.hamburger');
+const navslide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
-const handleClick = () => {
-    hamburger.classList.toggle('hamburger--active');
+    burger.addEventListener('click',()=>{
+        nav.classList.toggle('nav-active');
+
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = 'navLinkFade .4s ease forwards .4s';
+            }
+        });
+        //burger animation
+        burger.classList.toggle('toggle');
+    });
+
 }
 
-hamburger.addEventListener('click', handleClick);
+navslide();

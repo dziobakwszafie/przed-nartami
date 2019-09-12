@@ -6,88 +6,100 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  background: white;
 }
-/*nagłówekhfd*/
+/*nagłówek*/
 .box1 {
-  height: 1/12vh;
   background: grey;
-  min-width: 400px;
   display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  min-height: 8vh;
+  border-bottom: 2px solid black;
 }
 h4 {
   font-size: 36px;
-  padding: 30px 100px 20px 30px;
-  margin: 0 0 0 20vw;
+  font-weight: 600;
   font-family: "Raleway", sans-serif;
-  background: #ed1212;
 }
-/*hamburger menu*/
-.hamburger {
-  padding: 10px;
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  list-style: none;
+}
+.nav-links a{
+  text-decoration: none;
+  color: black;
+}
+.burger{
   cursor: pointer;
-  background: transparent;
-  border: 0;
+  display: none;
 }
-.hamburgerBox {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  position: relative;
-  background: greenyellow;
-}
-.hamburgerIn {
-  width: 100%;
+.burger div{
+  width: 35px;
   height: 3px;
-  background: white;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 5px;
+  background: black;
 }
-.hamburgerIn::before,
-.hamburgerIn::after {
-  width: 100%;
-  height: 3px;
-  background: white;
-  position: absolute;
-  left: 0;
-  transition: transform 0.1s 0.1s ease-in-out;
-
-  content: "";
+@media screen and (max-width:1100px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: grey;
+    transform: translateX(100%);
+    transition: transform .3s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+  .nav-active{
+    transform: translateX(0%);
+  }
+  @keyframes navLinkFade{
+    from{
+      opacity: 0;
+      transform:translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 }
-.hamburgerIn::before {
-  top: -10px;
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
 }
-.hamburgerIn::after {
-  top: 10px;
+.toggle .line2{
+  opacity: 0;
 }
-.hamburger--active .hamburgerIn {
-  background: transparent;
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
 }
-.hamburger--active .hamburgerIn:before {
-  transform: translateY(10px) rotate(45deg);
-}
-.hamburger--active .hamburgerIn:after {
-  transform: translateY(-10px) rotate(-45deg);
-}
-/*koniec hamburgera*/
 /*opis*/
 .container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: stretch;
+  margin: auto;
+  align-items: center;
   justify-items: center;
-  background: white;
-  margin-left: 18.75vw;
-  margin-right: 18.75vw;
+  max-width: 1000px;
   min-width: 400px;
 }
-.box2 {
-  grid-column: 1/6;
-  margin: 10px 5% 20px 5%;
+.box2{
+  margin: 0 30px 0 30px;
 }
-.box2 > h3 {
+.box2 h3 {
   font-size: 18px;
   margin: 30px 0 20px 20px;
 }
@@ -95,13 +107,11 @@ h4 {
   list-style: none;
 }
 .person {
-  margin-left: 35px;
-  margin-top: 15px;
+  margin: 15px 35px;
 }
-
 /*levele*/
-.box3 {
-  grid-column: 2/3;
+.box3{
+  margin: 0 30px 0 30px;
 }
 .levels {
   list-style: none;
@@ -111,30 +121,20 @@ h4 {
 }
 .level {
   padding: 10px 10px 10px 10px;
-  margin: 10px;
+  margin: 20px 10px 20px 10px;
   border-radius: 5px;
   border: 1.5px solid #2d2d2e;
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
-  width: 200px;
+  width: 160px;
   height: 50px;
-  /*kurwa nie dziala max szerokosc chuj wie czemu, pewnie temu ze raz mam vw a raz px*/
 }
 /*parametry*/
-.box4 {
-  grid-column: 3/4;
-}
-#param {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: right;
-  padding: 10px 10px 50px 0;
-}
-.box5 {
-  grid-column: 4/5;
-}
-.box5 > div {
-  min-width: 150px;
+.box4{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin: 0 30px 0 30px;
 }
 .height,
 .weight,
@@ -142,60 +142,40 @@ h4 {
 .age {
   padding: 18px 20px;
   text-decoration: none;
-  margin: 10px 0 18px 20px;
+  margin: 20px auto 20px auto;
   background-color: #bfc8d9;
   border-radius: 5px;
   border: 1.5px solid #2d2d2e;
   font-weight: 600;
-  width: 150px;
+  width: 200px;
 }
 /*wyniki*/
-.container2 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: stretch;
-  justify-items: stretch;
-  background: white;
-  margin-left: 18.75vw;
-  margin-right: 18.75vw;
-  min-width: 400px;
-}
-.box6 {
-  grid-column: 1/2;
-  padding: 5px;
-  font-size: 14px;
-  margin: 15px 0 15px 5%;
-}
-.box6 h3 {
-  font-size: 22px;
-}
-.box7 {
-  grid-column: 2/3;
-  border-radius: 5px;
-  margin: 15px 5% 15px 0;
-  width: 250px;
-}
-#result {
-  border-radius: 5px;
-  border: 1.5px solid #2d2d2e;
-  background-color: #bfc8d9;
+.container2{
   display: flex;
-  justify-content: center;
-  margin: 30px 5px 5px 5px;
-  width: 200px;
-  height: 60px;
-  padding: 6px 10px 6px 6px;
-  text-align: center;
+  margin: 0 30px 0 30px;
+  background: #dfdfee;
+}
+.box5 {
+  border-radius: 5px;
+  margin: 15px 0 15px 0;
+  width: 250px;
 }
 .result {
   border-radius: 5px;
   border: 1.5px solid #2d2d2e;
-  background-color: #ed1212;
   display: flex;
-  float: left;
   justify-content: center;
-  margin: 30px 5px 5px 5px;
+  margin: 20px 20px 20px 20px;
   width: 200px;
-  height: 60px;
+  height: 200px;
   padding: 10px 10px 10px 10px;
+}
+.box6 {
+  padding: 5px;
+  font-size: 14px;
+  margin: 0 0 0 5%;
+  background: #c44141;
+}
+.box6 h3{
+  font-size: 22px;
 }
