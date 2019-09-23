@@ -20,3 +20,22 @@ const navslide = () => {
 }
 
 navslide();
+
+const kaszana = document.querySelector('#people').nodeValue;
+console.log(kaszana)
+
+/*
+wartości z selektora przyporządkowywujemy wartości wartosciom w tablicy 
+
+weight = []
+
+
+
+tablica 1 z masą 
+tablica 2 ze wzrostem 
+bierzeym największą wartość 
+korygujemy tę wartosć o wiek 
+tworzymy tablice dwuwymiarową 
+rzad wybieram z tej wiekszej z 2 wartosci 
+kolumne na podstawie buta 
+*/
