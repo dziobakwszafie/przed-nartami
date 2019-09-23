@@ -24,11 +24,21 @@ navslide();
 const kaszana = document.querySelector('#people').nodeValue;
 console.log(kaszana)
 
+function calc() {
+    const weight = document.querySelector
+}
+
 /*
 wartości z selektora przyporządkowywujemy wartości wartosciom w tablicy 
 
-weight = []
+petla przyporz
 
+
+var e = document.getElementById("dupa2");
+e.addEventListener("change", function () {
+var strUser = e.options[e.selectedIndex].value;
+document.getElementById("dupa").innerHTML = strUser;
+})
 
 
 tablica 1 z masą 

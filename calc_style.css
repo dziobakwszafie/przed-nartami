@@ -9,12 +9,12 @@ body {
 }
 /*nagłówek*/
 .box1 {
-  background: grey;
+  background: rgb(186, 187, 189);
   display: flex;
   justify-content: space-around; 
   align-items: center;
   min-height: 8vh;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(107, 105, 105);
 }
 h4 {
   font-size: 36px;
