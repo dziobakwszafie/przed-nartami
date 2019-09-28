@@ -1,7 +1,5 @@
 @charset "UTF-8";
 * {
-  margin: 0px;
-  padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -12,7 +10,7 @@ body {
 }
 
 /*nagłówek*/
-.box1 {
+.header-box {
   background: url(background1.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,25 +24,25 @@ body {
   border-bottom: 2px solid #979292;
 }
 
-.box1 .logo {
+.header-box .logo {
   width: 30vw;
   height: 20vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.box1 .logo_file {
+.header-box .logo_file {
   width: 100%;
   height: auto;
 }
 
-.box1 h4 {
+.header-box h4 {
   font-size: 36px;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
 }
 
-.box1 .nav-links {
+.header-box .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +55,7 @@ body {
   margin: 5vh 0 0 0;
 }
 
-.box1 .nav-links a {
+.header-box .nav-links a {
   text-decoration: none;
   color: black;
 }
@@ -150,45 +148,6 @@ body {
           transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/*tekst właściwy*/
-.container {
-  width: 80vw;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: lightpink;
-}
-
-.container .photo1 {
-  height: 250px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 10px 0 0 0;
-  background-image: url(intro1.jpg);
-}
-
-.container .photo2 {
-  height: 250px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 10px 0 0 0;
-  background-image: url(intro2.jpg);
-}
-
-.container .text1,
-.container .text2,
-.container .text3 {
-  height: 200px;
-  background: lightgreen;
-}
-
 /*opis*/
 .container {
   margin: auto;
@@ -207,55 +166,6 @@ body {
 		rgb(236, 165, 189)
 		*/
   /*parametry*/
-}
-
-.container .box2 {
-  background: #41a6c4;
-}
-
-.container .box2 .box22 {
-  background: lightgreen;
-  width: 200px;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.container .box2 .box22 .box222 {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.container .box22:hover .box222 {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.container figure {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.container .box222 .front {
-  background: #c44141;
-}
-
-.container .box222 .back {
-  background: #41a6c4;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .container .box2 {

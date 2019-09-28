@@ -1,5 +1,7 @@
 @charset "UTF-8";
 * {
+  padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -130,6 +132,6 @@ body {
 .calc {
   width: 100%;
   height: 200px;
-  background: #dfe6e9;
+  background: #2d3436;
 }
 /*# sourceMappingURL=ski-web-v.2.css.map */
