@@ -1,7 +1,5 @@
 
 * {
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
   }
   body {
@@ -9,7 +7,7 @@
     font-size: 16px;
   }
   /*nagłówek*/
-  .box1 {
+  .header-box {
     background: url(background1.jpg);
     display: flex;
     justify-content: space-around; 
@@ -100,6 +98,22 @@
   .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*tekst właściwy*/
   .container{   
     width: 80vw;
