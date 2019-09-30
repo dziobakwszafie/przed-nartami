@@ -7,6 +7,8 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
 }
+
+
 /*nagłówek*/
 .header-box{
   height: 100px;
@@ -54,6 +56,7 @@ body {
   visibility: hidden;
   z-index: -10;
 }
+
 @media screen and (max-width:900px){
   .show-menu-btn,
   .hide-menu-btn{
@@ -84,38 +87,69 @@ body {
     right: 0;
   }
 }
-/*contener*/
 
-}
-/*intro*/
-.intro{
-  width: 100%;
-  height: 200px;;
-  background: #fdcb6e;
-}
-/*skis*/
-.skis{
-  width: 100%;
-  height: 200px;;
-  background: #55efc4;
-}
-/*service*/
-.service{
-  width: 100%;
-  height: 200px;;
-  background: #ff7675;
-}
-/*calc*/
-.calc{
-  width: 100%;
-  height: 200px;
-  background: #2d3436;
-}
-/*opis*/
+
+/*contener*/
 .container {
   margin: auto;
   align-items: center;
   justify-items: center;
   max-width: 1000px;
   min-width: 400px;
+}
+
+
+/*intro*/
+.intro{
+  width: 100%;
+  height: 200px;
+  background: #fdcb6e;
+}
+
+
+/*skis*/
+.skis{
+  width: 100%;
+  height: 200px;
+  background: #55efc4;
+}
+
+
+/*service*/
+.service{
+  width: 100%;
+  height: 200px;
+  background: #ff7675;
+}
+
+
+/*calc*/
+.calc{
+  width: 100%;
+
+  background: #2d3436;
+  display: flex;
+  flex-direction: column;
+}
+.box1{
+  background: transparent;
+}
+
+//wrzucamy opis ludzi
+//   rgb(170, 241, 179)
+//   rgb(174, 191, 248)
+//   rgb(226, 231, 174)
+//   rgb(253, 179, 179)
+//   rgb(236, 165, 189)
+.big-box{
+  background: transparent;
+}
+.box2{
+  background: transparent;
+}
+.box3{
+  background: transparent;
+}
+.box4{
+  background: transparent;
 }
