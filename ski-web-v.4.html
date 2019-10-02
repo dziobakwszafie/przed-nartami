@@ -34,17 +34,16 @@
 		<!--INTRO-->
 		<div class="intro" id="intro">
 			<div class="text">
-				<h2><img id="ski-icon" src="Ski.ico" alt="ski icon">Po co w ogóle powstała ta strona?</h2>
+				<h2><img id="ski-icon" src="Ski.ico" alt="ski icon">Po co powstała ta strona?</h2>
 				<br>
-				<p>W sumie to sam autor, czyli ja bo będę pisał w 1 osobie, nie wie.
-				W pierwotnej wersji to miał być sam kalkulator do obliczania DINów na wiązaniu. Potem uznałem, że to trochę łyso i dorzuciłem parę zdań.
+				<p>W pierwotnej wersji to miał być sam kalkulator do obliczania DINów na wiązaniu. Potem uznałem, że to trochę łyso i dorzuciłem parę zdań.
 				<br>
 				<br>
 				Na te chwilę zamysł tej strony jest taki, żeby zapewnić komplet informacji komuś kto chce iśc na narty ale nie za bardzo kuma co z czym i w ogóle.
 				Dodatkowo dorzuciłem troszkę informacji na temat tego jak kupić sprzęt lub jak zabdac o niego wynosząc z piwnicy.
 				<br>
 				<br>
-				Nie mam zamiaru tutaj uczyć tego jak jeździć bo to sie albo czuje albo nie, natomiast chętnie podziele się pewną wiedzą, dzięki której dostaniesz czytelniku większą szansę na powrót bez gipsu. 
+				Nie mam zamiaru tutaj uczyć tego jak jeździć, natomiast chętnie podziele się pewną wiedzą, dzięki której dostaniesz czytelniku większą szansę na powrót bez gipsu. 
 				Strona jest podzielona w miarę intuicyjnie (chyba), przejdź po prostu przez wszystkie zakładki i czuj się bezpieczny. 
 				Jak starczy mi weny to będę stopniowo poszerzał zakres tematów wchodząc w bardziej zaawansowane kwestie.
 				<br>
@@ -55,18 +54,22 @@
 				</p>
 			</div>
 			<div class="btn-div">
-					<button class="navi-btn"><a href="#basics">PODSTAWY</a></button>
-				<button class="navi-btn"><a href="#calc">KALKULATOR</a></button>
+				<button class="navi-btn"><a href="#basics">PODSTAWY</a></button>
+				<button class="navi-btn"><a href="#calc"id="navi-btn_1">KALKULATOR</a></button>
 			</div>
 		</div>
 		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="background1.jpg"></div>
 		<!--BASICS-->
 		<div class="basics" id="basics">
-			tu czeba walnac podstawy co i jak i co dalej poczac
-			<button class="navi-btn"><a href="#calc">wybór sprzętu</a></button>
-			<button class="navi-btn">serwis</button>
+			<div class="text">
+				<h2><img id="ski-icon" src="Ski.ico" alt="ski icon">Od czego w ogóle zacząć temat?</h2>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet animi voluptas saepe nihil, eos voluptate? Modi suscipit labore accusamus quos animi maiores iure quasi amet ipsum, magni ad facilis dolor placeat repudiandae voluptatem inventore? Nulla deleniti eligendi commodi laborum ducimus culpa, doloribus ipsa officiis voluptatum nam, sint placeat atque doloremque.
+			</div>
+			<div class="btn-div">
+				<button class="navi-btn"><a href="#skis">WYBÓR SPRZĘTU</a></button>
+				<button class="navi-btn"><a href="#service">SERWISOWANIE</a></button>
+			</div>
 		</div>
-		<div class="sepdiv"></div>
 		<!--SKIS-->
 		<div class="skis" id="skis">
 			<div class="text">
@@ -80,8 +83,9 @@
 					<li>sl/gs - narty o charakterystyce zbliżonej do nart zawodniczych, slalomowe (sl) pozwalają robić ciaśniejsze skręty</li>
 				</ul>
 			</div>
+			<span id="long-line"></span>
+			<span id="long-line"></span>
 		</div>
-		<div class="sepdiv"></div>
 		<!--service-->
 		<div class="service" id="service">
 			<div class="text">
@@ -99,6 +103,7 @@
 					<li>ewentulane wyregulowanie wiązań jeśli dupa spuchła przez wakacje albo mamy nowe buciki</li>
 				</ol><br>	
 			</div>		
+			<span id="line"></span>
 			<div class="text">
 				<h3>To teraz małe rozwinięcie co i po co. </h3>
 				<br>
@@ -110,6 +115,7 @@
 				<p>Krawędzie ostrzone są zarówno od spodu jak i z boku. Trzeba jednak wspomnieć że to nie nóż  w kuchni, który ostrzymy na oko, więc jak ktoś chce zrobić od ręki pilnikiem warsztatowym to nie polecam. 
 				Ostrzymy je pod odpowiednim kątem. To pod jakim kątem krawędz zostanie zaostrzona wpływa w istotny sposób na naszą jazdę. Znaczy no. Jak umiesz dobrze jeździsz to poczujesz różnice przy zmianie o jeden kąt, jak jesteś typowym amatorem to pewnie nie odczujesz różnicy w sposób świadomy ale moze być ci ciężej skręcić na przykład.</p> 
 				<br>
+				<span id="line"></span>
 				<h3>W przypadku amatorów polecanymi kątami są: </h3>
 				<br>
 				<ul>
@@ -119,6 +125,7 @@
 				<br>
 				<p>Ja w nartach na niedzielne jazdy mam 88/0,5 i to jest ok do takiego w miare snucia się po stoku. 89/0,7 Będzie bardziej stabilna na prostych i troche gorzej trzymała w skręcie. </p>
 				<br>
+				<span id="line"></span>
 				<h3>Smarowanie</h3> 
 				<br>
 				<p>Co ile powinno się smarować narty? No ja smaruje co jazde. A przynajmniej smarowałem w zeszłym roku jak miałem czas. 
@@ -136,23 +143,23 @@
 		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="background2.jpg"></div>
 		<!--calc-->
 		<div class="calc-title">
-			<img id="calc-icon"src="calculator.ico" alt="calculator icon"><h2>Sprawdź swój poziom</h2>
+			<h2>Kalkulator siły wypięcia wiązania</h2>
+			<p>Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić kilka czynników.
+				<br>
+				Przede wszystkim musisz przyporządkowac się do jednej z grup zaawansowania. 
+				W tym celu przeczytaj opisy poszczególnych opcji.
+			</p>
 		</div>
 		<div class="calc" id="calc">
 			<div class="box1">
-				<!-- <ul class="people">
-					<li class="person"><b>Świeżak</b> - pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie jesteś zbyt nachalny w tych oczekiwaniach.</li>
-					<li class="person"><b>Niedzielny Janusz</b> - ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i dziczysz aż do otwartego złamania.</li>
-					<li class="person"><b>Zwykły ludź</b> - pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii i ciśniesz na Biały Krzyż.</li>
-					<li class="person"><b>Dzik</b> - parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię janusze co blokują Golgotę jadąc ześlizgiem.</li>
-					<li class="person"><b>Turbodzik</b> - nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i umisz skręcać z karwinga.</li>
-				</ul> -->
 				<div class="cont-card">
 					<div class="card">
 						<div class="face face1">	
-							<i class="fas fa-minus-circle"></i>
-							<i class="far fa-circle"></i>
-							<i class="far fa-circle"></i>
+							<div class="dots">
+								<i class="fas fa-minus-circle"></i>
+								<i class="far fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
 							<h3>Świeżak</h3>					
 						</div>
 						<div class="face face2">						
@@ -161,9 +168,11 @@
 					</div>
 					<div class="card">
 						<div class="face face1">	
-							<i class="fas fa-circle"></i>
-							<i class="far fa-circle"></i>
-							<i class="far fa-circle"></i>
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="far fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
 							<h3>Niedzielny Janusz</h3>					
 						</div>
 						<div class="face face2">						
@@ -172,9 +181,11 @@
 					</div>
 					<div class="card">
 						<div class="face face1">	
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-circle"></i>
-							<i class="far fa-circle"></i>
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="far fa-circle"></i>
+							</div>
 							<h3>Zwykły ludź</h3>					
 						</div>
 						<div class="face face2">						
@@ -183,9 +194,11 @@
 					</div>
 					<div class="card">
 						<div class="face face1">	
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-circle"></i>
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+							</div>
 							<h3>Dzik</h3>					
 						</div>
 						<div class="face face2">						
@@ -194,9 +207,11 @@
 					</div>
 					<div class="card">
 						<div class="face face1">	
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-circle"></i>
-							<i class="fas fa-plus-circle"></i>
+							<div class="dots">
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-circle"></i>
+								<i class="fas fa-plus-circle"></i>
+							</div>
 							<h3>Turbodzik</h3>					
 						</div>
 						<div class="face face2">						
