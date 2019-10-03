@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator wiązań narciarskich</title>
+	<link rel="stylesheet" type="text/css" href="calc_sass.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	</head>
+<body>
+	<!--nagłówek-->
+	<header>
+		<nav class="box1">
+			<div class="logo">
+				<h4>Kalkulator wiązań narciarskich</h4> 
+			</div>
+			<ul class="nav-links">
+				<li><a href="#">WSTĘP</a></li> 
+				<li><a href="#">DOBÓR NART</a></li>
+				<li><a href="#">SERWIS</a></li>
+				<li><a href="#">KALKULATOR</a></li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!--obliczenia-->
+		<div class="container">
+			<div class="box2">	
+				<h3>W celu rozwiania wątpliwości w kwestii swoich umiejętności, zerknij na rozpiskę.</h3>
+				<ul class="people">
+					<li class="person"><b>Świeżak</b> - pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie jesteś zbyt nachalny w tych oczekiwaniach.</li>
+					<li class="person"><b>Niedzielny Janusz</b> - ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i dziczysz aż do otwartego złamania.</li>
+					<li class="person"><b>Zwykły ludź</b> - pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii i ciśniesz na Biały Krzyż.</li>
+					<li class="person"><b>Dzik</b> - parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię janusze co blokują Golgotę jadąc ześlizgiem.</li>
+					<li class="person"><b>Turbodzik</b> - nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i umisz skręcać z karwinga.</li>
+				</ul>
+			</div>
+			<div class="box3">
+				<ul class="levels">
+					<li><button class="level"><span>ŚWIEŻAK</span></button></li>
+					<li><button class="level"><b>NIEDZIELNY JANUSZ</b></button></li>
+					<li><button class="level"><b>ZWYKŁY LUDŹ</b></button></li>
+					<li><button class="level"><b>DZIK</b></button></li>
+					<li><button class="level"><b>TURBODZIK</b></button></li>
+				</ul>
+			</div>
+			<div class="box4">
+				<div><select class="height">
+					<option selected disabled>WZROST</option>
+					<option class="148">0-148 cm</option>
+					<option class="157">149-157 cm</option>
+					<option class="166">158-166 cm</option>
+					<option class="178">167-178 cm</option>
+					<option class="194">179-194 cm</option>
+					<option class="195">195+ cm</option>
+				</select></div>
+				<div><select class="weight">
+					<option selected disabled>WAGA</option>
+					<option class="13">10-13 kg</option>
+					<option class="17">14-17 kg</option>
+					<option class="21">18-21 kg</option>
+					<option class="25">22-25 kg</option>
+					<option class="30">26-30 kg</option>
+					<option class="35">30-35 kg</option>
+					<option class="41">36-41 kg</option>
+					<option class="48">42-48 kg</option>
+					<option class="57">49-57 kg</option>
+					<option class="66">58-66 kg</option>
+					<option class="78">67-78 kg</option>
+					<option class="94">79-94 kg</option>
+					<option class="95">95+ kg</option>
+				</select></div>
+				<div><select class="length">
+					<option selected disabled>DŁ. BUTA</option>
+					<option class="230">0-230 mm</option>
+					<option class="250">231-250 mm</option>
+					<option class="270">251-270 mm</option>
+					<option class="290">271-290 mm</option>
+					<option class="310">291-310 mm</option>
+					<option class="330">311-330 mm</option>
+					<option class="350">331-350 mm</option>
+					<option class="351">351+ mm</option>
+				</select></div>
+				<div><select class="age">
+					<option selected disabled>WIEK</option>
+					<option class="9">0-9 lat</option>
+					<option class="250">10-49 lat</option>
+					<option class="270">50+ lat</option>
+				</select></div>
+			</div>
+			<div class="container2">
+			<div class="box5">
+				<output class="result">WYNIK</output>
+			</div>
+			<div class="box6">
+				<h3>Pozor!</h3></br>
+				Wartość tutaj obliczona jest wartością teoretyczną i choć jest ona miarodajna to nie należy jej brac bezkrytycznie.</br></br>
+				Wynika to z faktu, iż sprężyny w wiązaniach wraz z upływem czasu zmieniają swoje parametry.</br></br>
+				Jeśli masz w miarę nowe wiązanie to luzik ale przy, dajmy na to, 10 letnim wiązaniu obliczona siła może być zbyt niska i wiązanie może wypinać zbyt wcześnie.</br></br>
+				W celu dokladnego sprawdzenia potrzebnej siły wypięcia najlepiej udać się do porządnego serwisu, gdzie przy pomocy maszyny ustala się siłę wypięcia.</br></br>
+				Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania kulfona więc polecam pochylić się nad tematem. </br></br>
+			</div>	
+			</div>
+		</div>
+	</main>
+	<script src="app.js"></script>
+</body>
+</html>
