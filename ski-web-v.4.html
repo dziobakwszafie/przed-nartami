@@ -224,59 +224,58 @@
 			</div>
 			<div class="big-box">
 				<div class="box2">
-					<select class="level">
+					<select class="level" id="level">
 						<option selected disabled>POZIOM</option>
-						<option class="1">ŚWIEŻAK</option>
-						<option class="2">NIEDZIELNY JANUSZ</option>
-						<option class="3">ZWYKŁY LUDŹ</option>
-						<option class="4">DZIK</option>
-						<option class="5">TURBODZIK</option>
+						<option value="-1">ŚWIEŻAK</option>
+						<option value="0">NIEDZIELNY JANUSZ</option>
+						<option value="1">ZWYKŁY LUDŹ</option>
+						<option value="2">DZIK</option>
+						<option value="3">TURBODZIK</option>
 					</select>
-					<select class="height">
+					<select class="height" id="height">
 						<option selected disabled>WZROST</option>
-						<option class="148">0-148 cm</option>
-						<option class="157">149-157 cm</option>
-						<option class="166">158-166 cm</option>
-						<option class="178">167-178 cm</option>
-						<option class="194">179-194 cm</option>
-						<option class="195">195+ cm</option>
+						<option value="8">0-148 cm</option>
+						<option value="9">149-157 cm</option>
+						<option value="10">158-166 cm</option>
+						<option value="11">167-178 cm</option>
+						<option value="12">179-194 cm</option>
+						<option value="13">195+ cm</option>
 					</select>
-					<select class="weight">
+					<select class="weight" id="weight">
 						<option selected disabled>WAGA</option>
-						<option class="13">10-13 kg</option>
-						<option class="17">14-17 kg</option>
-						<option class="21">18-21 kg</option>
-						<option class="25">22-25 kg</option>
-						<option class="30">26-30 kg</option>
-						<option class="35">30-35 kg</option>
-						<option class="41">36-41 kg</option>
-						<option class="48">42-48 kg</option>
-						<option class="57">49-57 kg</option>
-						<option class="66">58-66 kg</option>
-						<option class="78">67-78 kg</option>
-						<option class="94">79-94 kg</option>
-						<option class="95">95+ kg</option>
+						<option value="1">10-13 kg</option>
+						<option value="2">14-17 kg</option>
+						<option value="3">18-21 kg</option>
+						<option value="4">22-25 kg</option>
+						<option value="5">26-30 kg</option>
+						<option value="6">30-35 kg</option>
+						<option value="7">36-41 kg</option>
+						<option value="8">42-48 kg</option>
+						<option value="9">49-57 kg</option>
+						<option value="10">58-66 kg</option>
+						<option value="11">67-78 kg</option>
+						<option value="12">79-94 kg</option>
+						<option value="13">95+ kg</option>
 					</select>
-					<select class="boot">
+					<select class="boot" id="boot">
 						<option selected disabled>DŁ. BUTA</option>
-						<option class="230">0-230 mm</option>
-						<option class="250">231-250 mm</option>
-						<option class="270">251-270 mm</option>
-						<option class="290">271-290 mm</option>
-						<option class="310">291-310 mm</option>
-						<option class="330">311-330 mm</option>
-						<option class="350">331-350 mm</option>
-						<option class="351">351+ mm</option>
+						<option value="0">0-230 mm</option>
+						<option value="1">231-250 mm</option>
+						<option value="2">251-270 mm</option>
+						<option value="3">271-290 mm</option>
+						<option value="4">291-310 mm</option>
+						<option value="5">311-330 mm</option>
+						<option value="6">331-350 mm</option>
+						<option value="7">351+ mm</option>
 					</select>
-					<select class="age">
+					<select class="age" id="age">
 						<option selected disabled>WIEK</option>
-						<option class="9">0-9 lat</option>
-						<option class="250">10-49 lat</option>
-						<option class="270">50+ lat</option>
+						<option value="-1">0-9 lub 50+ lat</option>
+						<option value="0">10-49 lat</option>
 					</select>
 				</div>
 				<div class="box3">
-					<output class="result">9,5</output>
+					<button type="button" onclick="calc()"><output class="result">9,5</output></button>
 				</div>
 			</div>
 			<div class="box4">
@@ -295,5 +294,13 @@
 			Made by dzikisledz
 		</div>
 	</footer>
-</body>
-</html
+	<script src="app.js"></script>
+</body>	
+</html>
+
+<!-- 
+	1. make it mobile friendly 
+	2. solve hamburger collapse problem 
+	3. JS calculator
+	4. correct shortcomings 
+-->
