@@ -24,5 +24,9 @@ function calc() {
 
     const fin1 = array[i][summary];
 
+    console.log(fin1);
+
+    document.querySelector('#result').innerHTML = fin1;
+
 }
 calc(); 
