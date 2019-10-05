@@ -26,7 +26,12 @@ function calc() {
 
     console.log(fin1);
 
-    document.querySelector('#result').innerHTML = fin1;
+    // if (fin1>0){
+    // document.querySelector('#result').innerHTML = fin1;
+    // } else
+    // document.querySelector('#result').innerHTML = "";
 
+    document.querySelector('#result').innerHTML = fin1;
 }
 calc(); 
+

@@ -4,11 +4,12 @@
 	<title>Przed nartami</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="ski-web-v.4.css">
+	<link rel="stylesheet" type="text/css" href="sass/ski-web-v.4.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/7517802c18.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="parallax.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<header>
@@ -32,11 +33,11 @@
 		</nav>
 	</header>
 	<main>
-		<div class="parallax-window" id="hpar" data-parallax="scroll" data-z-index="0" data-speed=".5" data-image-src="header.jpg"></div>
+		<div class="parallax-window" id="hpar" data-parallax="scroll" data-z-index="0" data-speed=".5" data-image-src="img/header.jpg"></div>
 		<!--INTRO-->
 		<div class="intro" id="intro">
 			<div class="text">
-				<h2><img id="ski-icon" src="Ski.ico" alt="ski icon">Po co powstała ta strona?</h2>
+				<h2><img id="ski-icon" src="img/Ski.ico" alt="ski icon">Po co powstała ta strona?</h2>
 				<br>
 				<p>W pierwotnej wersji to miał być sam kalkulator do obliczania DINów na wiązaniu. Potem uznałem, że to trochę łyso i dorzuciłem parę zdań.
 				<br>
@@ -60,11 +61,11 @@
 				<button class="navi-btn"><a href="#calc"id="navi-btn_1">KALKULATOR</a></button>
 			</div>
 		</div>
-		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="background1.jpg"></div>
+		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="img/background1.jpg"></div>
 		<!--BASICS-->
 		<div class="basics" id="basics">
 			<div class="text">
-				<h2><img id="ski-icon" src="Ski.ico" alt="ski icon">Od czego w ogóle zacząć temat?</h2>
+				<h2><img id="ski-icon" src="img/Ski.ico" alt="ski icon">Od czego w ogóle zacząć temat?</h2>
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet animi voluptas saepe nihil, eos voluptate? Modi suscipit labore accusamus quos animi maiores iure quasi amet ipsum, magni ad facilis dolor placeat repudiandae voluptatem inventore? Nulla deleniti eligendi commodi laborum ducimus culpa, doloribus ipsa officiis voluptatum nam, sint placeat atque doloremque.
 			</div>
 			<div class="btn-div">
@@ -142,7 +143,7 @@
 				O ile długość buta jest raczej jasno określona, to do okreslania potrzebnej siły wypięcia polecam skorzystac z kalkulatora, do którego Cie przeniesie jak klikniesz tutaj.</p>
 			</div>
 		</div>
-		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="background2.jpg"></div>
+		<div class="parallax-window" data-parallax="scroll" data-z-index="0" data-speed=".4" data-image-src="img/background2.jpg"></div>
 		<!--calc-->
 		<div class="calc-title">
 			<h2>Kalkulator siły wypięcia wiązania</h2>
@@ -224,16 +225,16 @@
 			</div>
 			<div class="big-box">
 				<div class="box2">
-					<select class="level" id="level">
-						<option selected disabled>POZIOM</option>
+					<select class="level" id="level" onclick="calc()">
+						<option selected disabled value="">POZIOM</option>
 						<option value="-1">ŚWIEŻAK</option>
 						<option value="0">NIEDZIELNY JANUSZ</option>
 						<option value="1">ZWYKŁY LUDŹ</option>
 						<option value="2">DZIK</option>
 						<option value="3">TURBODZIK</option>
 					</select>
-					<select class="height" id="height">
-						<option selected disabled>WZROST</option>
+					<select class="height" id="height" onclick="calc()">
+						<option selected disabled value="">WZROST</option>
 						<option value="8">0-148 cm</option>
 						<option value="9">149-157 cm</option>
 						<option value="10">158-166 cm</option>
@@ -241,8 +242,8 @@
 						<option value="12">179-194 cm</option>
 						<option value="13">195+ cm</option>
 					</select>
-					<select class="weight" id="weight">
-						<option selected disabled>WAGA</option>
+					<select class="weight" id="weight" onclick="calc()">
+						<option selected disabled value="">WAGA</option>
 						<option value="1">10-13 kg</option>
 						<option value="2">14-17 kg</option>
 						<option value="3">18-21 kg</option>
@@ -257,8 +258,13 @@
 						<option value="12">79-94 kg</option>
 						<option value="13">95+ kg</option>
 					</select>
-					<select class="boot" id="boot">
-						<option selected disabled>DŁ. BUTA</option>
+					<select class="age" id="age" onclick="calc()">
+						<option selected disabled value="">WIEK</option>
+						<option value="-1">0-9 lub 50+ lat</option>
+						<option value="0">10-49 lat</option>
+					</select>
+					<select class="boot" id="boot" onclick="calc()">
+						<option selected disabled value="">DŁ. BUTA</option>
 						<option value="0">0-230 mm</option>
 						<option value="1">231-250 mm</option>
 						<option value="2">251-270 mm</option>
@@ -268,14 +274,9 @@
 						<option value="6">331-350 mm</option>
 						<option value="7">351+ mm</option>
 					</select>
-					<select class="age" id="age">
-						<option selected disabled>WIEK</option>
-						<option value="-1">0-9 lub 50+ lat</option>
-						<option value="0">10-49 lat</option>
-					</select>
 				</div>
 				<div class="box3">
-					<button class="result" type="button" onclick="calc()"><div id="result"></div></button>
+					<div id="result"></div>
 				</div>
 			</div>
 			<div class="box4">
@@ -294,7 +295,6 @@
 			Made by dzikisledz
 		</div>
 	</footer>
-	<script src="app.js"></script>
 </body>	
 </html>
 

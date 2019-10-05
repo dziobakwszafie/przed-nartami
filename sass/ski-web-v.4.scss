@@ -376,8 +376,8 @@ body {
 .level,
 .height,
 .weight,
-.boot,
-.age{
+.age,
+.boot{
   background: #2d3436;
   margin: 10px;
   border: solid 1px 2d3436;
@@ -399,7 +399,7 @@ body {
   font-size: 5em;
 }
 #result{
-  font-size: 5em;
+  font-size: 1.5em;
 }
 .result{
   width: 200px;
