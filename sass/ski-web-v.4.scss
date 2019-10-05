@@ -415,9 +415,12 @@ body {
 /*footer*/ 
 .madeby{
   width: 100%;
-  height: 50px;
   background: #3c4041;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: .6em;
+  h3{
+    padding: 5px 0 5px 0;
+  }
 }
