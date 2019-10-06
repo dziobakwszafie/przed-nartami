@@ -7,7 +7,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   background: #2d3436;
-  color: white;
+  color: #ffffff;
 }
 @mixin center-ic($flex, $align, $justify){
   display: $flex;
@@ -22,8 +22,15 @@ body {
 $textSmall: .6em;
 $textMedium: .8em;
 $textBig: 1.5em;
+
 $fontColor: #ffffff;
 $hoverColor: #821186;
+$bgColor: #2d3436;
+$lineColor: #161616;
+$bgFaceColor: #383838;
+
+
+
 
 /*nagłówek*/
 .header-box{
@@ -42,7 +49,7 @@ $hoverColor: #821186;
 }
 .nav-links a{
   padding: 0 20px;
-  color: #ffffff;
+  color: $fontColor;
   text-decoration: none;
   font-size: $textMedium;
   transition: .4s;
@@ -58,12 +65,12 @@ $hoverColor: #821186;
   float: right;
   i{
     line-height: 100px;
-    color: white;
+    color: $fontColor;
   }
 }
 .hide-menu-btn{
   i{
-    color: white;
+    color: $fontColor;
   }
 }
 .nav-links a:hover,
@@ -76,7 +83,6 @@ $hoverColor: #821186;
   visibility: hidden;
   z-index: -10;
 }
-
 @media screen and (max-width:950px){
   .show-menu-btn,
   .hide-menu-btn{
@@ -108,20 +114,7 @@ $hoverColor: #821186;
   }
 }
 
-
-
-/*intro*/
-.intro{
-  @include center-ii(flex, center, center);
-  margin: auto;
-  max-width: 1000px;
-  min-width: 400px;
-  flex-direction: column;
-}
-.parallax-window {
-  height: 300px;
-  background: transparent;
-}
+/*text size*/
 .text{
   @include center-ii(flex, center, center);
   padding: 20px;
@@ -133,6 +126,46 @@ $hoverColor: #821186;
   p{
     font-size: $textMedium;
   }
+  li{
+    font-size: $textMedium;
+  }
+}
+
+
+
+/*parallaxy*/
+.parallax-window-header {
+  height: 400px;
+  background: transparent;
+}
+.parallax-window {
+  height: 350px;
+  background: transparent;
+}
+.parallax2,
+.parallax3 {
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax2 {
+  background-image: url("/img/background1.jpg");
+}
+.parallax3 {
+  background-image: url("/img/background2.jpg");
+}
+
+
+
+/*intro*/
+.intro{
+  @include center-ii(flex, center, center);
+  margin: auto;
+  max-width: 1000px;
+  min-width: 400px;
+  flex-direction: column;
 }
 #ski-icon{
   width: 100px;
@@ -141,15 +174,15 @@ $hoverColor: #821186;
 }
 .navi-btn{
   height: 50px;
-  background: #2d3436;
-  border: solid 1px #2d3436;
+  background: $bgColor;
+  border: solid 1px $bgColor;
   font-weight: bold;
   cursor: pointer;
   margin-bottom: 20px;
   a{
-    color: white;
+    color: $fontColor;
     text-decoration: none;
-    border: black solid 2px;
+    border: $lineColor solid 2px;
     padding: 10px;
     margin: 20px;
     &:hover{
@@ -158,8 +191,8 @@ $hoverColor: #821186;
   }
 }
 #navi-btn_1{
-  background: rgb(22, 22, 148);    
-  border: rgb(22, 22, 148) solid 2px;
+  background: #161694;    
+  border: #161694 solid 2px;
     &:hover{
       background: $hoverColor;
       border: $hoverColor solid 2px;
@@ -179,20 +212,19 @@ $hoverColor: #821186;
   margin: auto;
   max-width: 1000px;
   min-width: 400px;
-  font-size: $textMedium;
   flex-direction: column;
 }
 #long-line{
   width: 50vw;
   height: 4px;
-  background: rgb(22, 22, 22);
+  background: $lineColor;
   border-radius: 3px;
   margin-bottom: 5px;
 }
 #line{
   width: 40vw;
   height: 4px;
-  background: rgb(22, 22, 22);
+  background: $lineColor;
   border-radius: 3px;
 }
 
@@ -205,6 +237,7 @@ $hoverColor: #821186;
   flex-direction: column;
   margin-top: 20px;
   h2{
+      @include center-ii(flex, center, center);
     font-size: $textBig;
     margin-bottom: 20px;
   }
@@ -219,14 +252,12 @@ $hoverColor: #821186;
   margin-right: 2vw;
 }
 .calc{
+  @include center-ii(flex, center, center);
   width: 100%;
   margin: auto;
-  align-items: center;
-  justify-items: center;
   max-width: 1000px;
   min-width: 400px;
   font-size: $textMedium;
-  display: flex;
   flex-direction: column;
 }
 .box1{
@@ -259,7 +290,7 @@ $hoverColor: #821186;
 .face1{
   @include center-ic(flex, center, center);
   position: relative;
-  background: #383838;
+  background: $bgFaceColor;
   z-index: 1;
   border-radius: 10px;
   transform: translateY(75px);
@@ -267,7 +298,7 @@ $hoverColor: #821186;
 .face2{
   @include center-ic(flex, center, center);
   position: relative;
-  background: #383838;
+  background: $bgFaceColor;
   box-sizing: border-box;
   border-radius: 10px;
   transform: translateY(-75px);
@@ -277,10 +308,10 @@ $hoverColor: #821186;
   transform: translateY(0);
   border-radius: 0px;
   cursor: pointer;
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px $lineColor;
 }
 .card:hover .face2{
-  background: #383838;
+  background: $bgFaceColor;
   transform: translateY(0);
   border-radius: 0px;
   cursor: pointer;
@@ -319,11 +350,11 @@ $hoverColor: #821186;
     transform: translateY(0);
     border-radius: 0px;
     cursor: pointer;
-    border-right: solid 4px black;
+    border-right: solid 4px $lineColor;
     border-bottom: none;
   }
   .card:hover .face2{
-    background: #383838;
+    background: $bgFaceColor;
     transform: translateY(0);
     border-radius: 0px;
     cursor: pointer;
@@ -345,10 +376,10 @@ $hoverColor: #821186;
 .weight,
 .age,
 .boot{
-  background: #383838;
+  background: $bgColor;
   margin: 10px;
-  border: solid 1px #2d3436;
-  color: white;
+  border: solid 1px $bgFaceColor;
+  color: $fontColor;
   border-radius: 5px;
   &:focus { 
   outline:0 !important; 
@@ -356,7 +387,7 @@ $hoverColor: #821186;
 }
 .box3{
   @include center-ic(flex, center, center);
-  background: #ffffff;
+  background: $fontColor;
   flex: 1;
   margin: 2% 5% 2% 5%;
   border-radius: 5px;
@@ -380,7 +411,8 @@ $hoverColor: #821186;
 .madeby{
   @include center-ic(flex, center, center);
   width: 100%;
-  background: #3c4041;
+  background: $bgFaceColor;
   font-size: $textSmall;
   padding: 5px 0 5px 0;
+  margin-top: 10px;
 }
