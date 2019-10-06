@@ -136,10 +136,6 @@ body {
   background: transparent;
 }
 
-#hpar {
-  height: 300px;
-}
-
 .text {
   display: -webkit-box;
   display: -ms-flexbox;
