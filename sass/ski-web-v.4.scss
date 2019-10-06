@@ -9,41 +9,48 @@ body {
   background: #2d3436;
   color: white;
 }
-// @mixin function($flex, $align, $justify){
-//   display: $flex;
-//   align-items: $align;
-//   justify-content: $justify;
-// }
+@mixin center-ic($flex, $align, $justify){
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin center-ii($flex, $align, $justify){
+  display: $flex;
+  align-items: $align;
+  justify-items: $justify;
+}
+$textSmall: .6em;
+$textMedium: .8em;
+$textBig: 1.5em;
+$fontColor: #ffffff;
+$hoverColor: #821186;
 
- 
 /*nagłówek*/
 .header-box{
+  @include center-ic(flex, center, space-around);
   height: 100px;
   background: #0c1e31;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 .logo{
   line-height: 100px;
-  color: #ffffff;
+  color: $fontColor;
   text-transform: uppercase;
 }
 .nav-links{
   line-height: 100px;
 }
 .nav-links a{
+  padding: 0 20px;
   color: #ffffff;
   text-decoration: none;
-  font-size: .8em;
-  padding: 0 20px;
+  font-size: $textMedium;
   transition: .4s;
 }
 .show-menu-btn,
 .hide-menu-btn{
   transition: .4s;
-  font-size: 30px;
+  font-size: $textBig;
   cursor: pointer;
   display: none;
 }
@@ -62,7 +69,7 @@ body {
 .nav-links a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover{
-  color: rgb(130, 17, 134);
+  color: $hoverColor;
 }
 #chk{
   position: absolute;
@@ -93,7 +100,7 @@ body {
   }
   .hide-menu-btn{
     position: absolute;
-    top:40px;
+    top: 40px;
     right: 40px;
   }
   #chk:checked ~ .nav-links{
@@ -101,16 +108,14 @@ body {
   }
 }
 
+
+
 /*intro*/
 .intro{
-  width: 100%;
+  @include center-ii(flex, center, center);
   margin: auto;
   max-width: 1000px;
   min-width: 400px;
-  font-size: .8em;
-  display: flex;
-  align-items: center;
-  justify-items: center;
   flex-direction: column;
 }
 .parallax-window {
@@ -121,16 +126,15 @@ body {
   height: 300px;
 }
 .text{
+  @include center-ii(flex, center, center);
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
   flex-direction: column;
   h2{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    font-size: 2em;
+    @include center-ii(flex, center, center);
+    font-size: $textBig;
+  }
+  p{
+    font-size: $textMedium;
   }
 }
 #ski-icon{
@@ -144,6 +148,7 @@ body {
   border: solid 1px #2d3436;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 20px;
   a{
     color: white;
     text-decoration: none;
@@ -151,7 +156,7 @@ body {
     padding: 10px;
     margin: 20px;
     &:hover{
-      background: rgb(130, 17, 134);
+      background: $hoverColor;
     }
   }
 }
@@ -159,20 +164,25 @@ body {
   background: rgb(22, 22, 148);    
   border: rgb(22, 22, 148) solid 2px;
     &:hover{
-      background: rgb(130, 17, 134);
-      border: rgb(130, 17, 134) solid 2px;
+      background: $hoverColor;
+      border: $hoverColor solid 2px;
     }
   }
+
+
+
 /*basics*/
-.basics{
+/*skis*/
+/*service*/
+.basics,
+.skis,
+.service{
+  @include center-ii(flex, center, center);
   width: 100%;
   margin: auto;
-  align-items: center;
-  justify-items: center;
   max-width: 1000px;
   min-width: 400px;
-  font-size: .8em;
-  display: flex;
+  font-size: $textMedium;
   flex-direction: column;
 }
 #long-line{
@@ -188,46 +198,21 @@ body {
   background: rgb(22, 22, 22);
   border-radius: 3px;
 }
-/*skis*/
-.skis{
-  width: 100%;
-  margin: auto;
-  align-items: center;
-  justify-items: center;
-  max-width: 1000px;
-  min-width: 400px;
-  font-size: .8em;
-  display: flex;
-  flex-direction: column;
-}
 
 
-/*service*/
-.service{
-  width: 100%;
-  margin: auto;
-  align-items: center;
-  justify-items: center;
-  max-width: 1000px;
-  min-width: 400px;
-  font-size: .8em;
-  display: flex;
-  flex-direction: column;
-}
 
+/*calc*/
 .calc-title{
+  @include center-ic(flex, center, center);
   width: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
-  font-size: 1em;
   h2{
+    font-size: $textBig;
     margin-bottom: 20px;
   }
   p{
-    font-size: .8em;
+    font-size: $textMedium;
     margin: 20px;
   }
 }
@@ -236,7 +221,6 @@ body {
   height: auto;
   margin-right: 2vw;
 }
-/*calc*/
 .calc{
   width: 100%;
   margin: auto;
@@ -244,7 +228,7 @@ body {
   justify-items: center;
   max-width: 1000px;
   min-width: 400px;
-  font-size: .8em;
+  font-size: $textMedium;
   display: flex;
   flex-direction: column;
 }
@@ -261,13 +245,11 @@ body {
 .card{
   margin: 5px;
   position: relative;
-  font-size: .8em;
+  font-size: $textMedium;
   display: flex;
   flex-direction: column;
 }
 .face{
-  // min-width: 120px;
-  // max-width: 9vw;
   width: 150px;
   height: 150px;
   transition: .5s;
@@ -278,21 +260,17 @@ body {
   margin: 5px;
 }
 .face1{
+  @include center-ic(flex, center, center);
   position: relative;
   background: #383838;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
   border-radius: 10px;
   transform: translateY(75px);
 }
 .face2{
+  @include center-ic(flex, center, center);
   position: relative;
   background: #383838;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
   border-radius: 10px;
   transform: translateY(-75px);
@@ -305,12 +283,11 @@ body {
   border-bottom: solid 4px black;
 }
 .card:hover .face2{
-  background: rgb(130, 17, 134);
+  background: #383838;
   transform: translateY(0);
   border-radius: 0px;
   cursor: pointer;
 }
-
 @media screen and (max-width:825px){
   .cont-card{
     display: flex;
@@ -318,13 +295,11 @@ body {
   }
   .card{
     height: 80px;
-    font-size: .8em;
+    font-size: $textMedium;
     display: flex;
     flex-direction: row;
   }
   .face{
-    // min-width: 120px;
-    // max-width: 9vw;
     width: 250px;
     height: 80px;
     transition: .5s;
@@ -332,17 +307,13 @@ body {
     flex-direction: column;
   }
   .face1{
+    @include center-ic(flex, center, center);
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform: translateX(125px);
   }
   .face2{
+    @include center-ic(flex, center, center);
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     transform: translateX(-125px);
   }
@@ -355,13 +326,12 @@ body {
     border-bottom: none;
   }
   .card:hover .face2{
-    background: rgb(130, 17, 134);
+    background: #383838;
     transform: translateY(0);
     border-radius: 0px;
     cursor: pointer;
   }
 }
-
 .big-box{
   width: 100%;
   display: flex;
@@ -378,49 +348,42 @@ body {
 .weight,
 .age,
 .boot{
-  background: #2d3436;
+  background: #383838;
   margin: 10px;
-  border: solid 1px 2d3436;
+  border: solid 1px #2d3436;
   color: white;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  
+  &:focus { 
+  outline:0 !important; 
+  }
 }
 .box3{
+  @include center-ic(flex, center, center);
   background: #ffffff;
   flex: 1;
   margin: 2% 5% 2% 5%;
   border-radius: 5px;
   color: #0c1e31;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 5em;
 }
 #result{
-  font-size: 1.5em;
-}
-.result{
-  width: 200px;
-  height: 150px;
+  font-size: $textBig;
+  transition: 2s;
 }
 .box4{
   background: #4b0303;
   width: 100%;
   padding: 15px;
-  font-size: .8em;
+  font-size: $textMedium;
 }
+
+
 
 /*footer*/ 
 .madeby{
+  @include center-ic(flex, center, center);
   width: 100%;
   background: #3c4041;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: .6em;
-  h3{
-    padding: 5px 0 5px 0;
-  }
+  font-size: $textSmall;
+  padding: 5px 0 5px 0;
 }

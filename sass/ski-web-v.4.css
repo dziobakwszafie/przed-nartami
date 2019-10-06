@@ -15,9 +15,6 @@ body {
 
 /*nagłówek*/
 .header-box {
-  height: 100px;
-  background: #0c1e31;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,6 +23,9 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  height: 100px;
+  background: #0c1e31;
+  padding: 0;
 }
 
 .logo {
@@ -39,10 +39,10 @@ body {
 }
 
 .nav-links a {
+  padding: 0 20px;
   color: #ffffff;
   text-decoration: none;
-  font-size: .8em;
-  padding: 0 20px;
+  font-size: 0.8em;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -51,7 +51,7 @@ body {
 .hide-menu-btn {
   -webkit-transition: .4s;
   transition: .4s;
-  font-size: 30px;
+  font-size: 1.5em;
   cursor: pointer;
   display: none;
 }
@@ -115,11 +115,6 @@ body {
 
 /*intro*/
 .intro {
-  width: 100%;
-  margin: auto;
-  max-width: 1000px;
-  min-width: 400px;
-  font-size: .8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +122,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  margin: auto;
+  max-width: 1000px;
+  min-width: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -143,7 +141,6 @@ body {
 }
 
 .text {
-  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +148,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  padding: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -165,7 +163,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+.text p {
+  font-size: 0.8em;
 }
 
 #ski-icon {
@@ -180,6 +182,7 @@ body {
   border: solid 1px #2d3436;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .navi-btn a {
@@ -205,19 +208,23 @@ body {
 }
 
 /*basics*/
-.basics {
-  width: 100%;
-  margin: auto;
+/*skis*/
+/*service*/
+.basics,
+.skis,
+.service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  width: 100%;
+  margin: auto;
   max-width: 1000px;
   min-width: 400px;
-  font-size: .8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 0.8em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -239,71 +246,32 @@ body {
   border-radius: 3px;
 }
 
-/*skis*/
-.skis {
-  width: 100%;
-  margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  max-width: 1000px;
-  min-width: 400px;
-  font-size: .8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/*service*/
-.service {
-  width: 100%;
-  margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  max-width: 1000px;
-  min-width: 400px;
-  font-size: .8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
+/*calc*/
 .calc-title {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 20px;
-  font-size: 1em;
 }
 
 .calc-title h2 {
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
 .calc-title p {
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 20px;
 }
 
@@ -313,7 +281,6 @@ body {
   margin-right: 2vw;
 }
 
-/*calc*/
 .calc {
   width: 100%;
   margin: auto;
@@ -323,7 +290,7 @@ body {
   justify-items: center;
   max-width: 1000px;
   min-width: 400px;
-  font-size: .8em;
+  font-size: 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +322,7 @@ body {
 .card {
   margin: 5px;
   position: relative;
-  font-size: .8em;
+  font-size: 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,8 +351,6 @@ body {
 }
 
 .face1 {
-  position: relative;
-  background: #383838;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,6 +360,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  background: #383838;
   z-index: 1;
   border-radius: 10px;
   -webkit-transform: translateY(75px);
@@ -402,8 +369,6 @@ body {
 }
 
 .face2 {
-  position: relative;
-  background: #383838;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,6 +378,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  background: #383838;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
@@ -430,7 +397,7 @@ body {
 }
 
 .card:hover .face2 {
-  background: #821186;
+  background: #383838;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   border-radius: 0px;
@@ -449,7 +416,7 @@ body {
   }
   .card {
     height: 80px;
-    font-size: .8em;
+    font-size: 0.8em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -472,7 +439,6 @@ body {
             flex-direction: column;
   }
   .face1 {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -482,11 +448,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
     -webkit-transform: translateX(125px);
             transform: translateX(125px);
   }
   .face2 {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -496,6 +462,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-transform: translateX(-125px);
@@ -511,7 +478,7 @@ body {
     border-bottom: none;
   }
   .card:hover .face2 {
-    background: #821186;
+    background: #383838;
     -webkit-transform: translateY(0);
             transform: translateY(0);
     border-radius: 0px;
@@ -549,20 +516,31 @@ body {
 .weight,
 .age,
 .boot {
-  background: #2d3436;
+  background: #383838;
   margin: 10px;
-  border: solid 1px 2d3436;
+  border: solid 1px #2d3436;
   color: white;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.level:focus,
+.height:focus,
+.weight:focus,
+.age:focus,
+.boot:focus {
+  outline: 0 !important;
 }
 
 .box3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #ffffff;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -570,51 +548,36 @@ body {
   margin: 2% 5% 2% 5%;
   border-radius: 5px;
   color: #0c1e31;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 5em;
 }
 
 #result {
   font-size: 1.5em;
-}
-
-.result {
-  width: 200px;
-  height: 150px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .box4 {
   background: #4b0303;
   width: 100%;
   padding: 15px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /*footer*/
 .madeby {
-  width: 100%;
-  background: #3c4041;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: .6em;
-}
-
-.madeby h3 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: #3c4041;
+  font-size: 0.6em;
   padding: 5px 0 5px 0;
 }
 /*# sourceMappingURL=ski-web-v.4.css.map */
