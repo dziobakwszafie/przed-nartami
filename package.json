@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/dziobakwszafie/PrzedNartami/issues"
   },
-  "homepage": "https://dziobakwszafie.github.io/przednartami",
+  "homepage": "https://dziobakwszafie.github.io/PrzedNartami/",
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
