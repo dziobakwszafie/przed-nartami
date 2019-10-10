@@ -34,3 +34,15 @@ function calc() {
 }
 calc(); 
 
+var menu = document.getElementById('nav-links');
+var closeIcon = document.getElementById("show-menu-btn");
+
+menu.addEventListener('click', handleMenuClick);
+
+function handleMenuClick(event) {
+    if (event.target instanceof HTMLAnchorElement) {
+    closeIcon.checked = false;
+    }
+}
+
+// https://codepen.io/esedic/pen/XgJNQv

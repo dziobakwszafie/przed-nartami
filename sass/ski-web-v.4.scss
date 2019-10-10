@@ -81,7 +81,7 @@ $bgFaceColor: #383838;
 #chk{
   position: absolute;
   visibility: hidden;
-  z-index: -10;
+  z-index: 10;
 }
 @media screen and (max-width:950px){
   .show-menu-btn,
@@ -328,7 +328,7 @@ $bgFaceColor: #383838;
     flex-direction: row;
   }
   .face{
-    width: 250px;
+    width: 236px;
     height: 80px;
     transition: .5s;
     display: flex;
@@ -337,13 +337,13 @@ $bgFaceColor: #383838;
   .face1{
     @include center-ic(flex, center, center);
     position: relative;
-    transform: translateX(125px);
+    transform: translateX(118px);
   }
   .face2{
     @include center-ic(flex, center, center);
     position: relative;
     box-sizing: border-box;
-    transform: translateX(-125px);
+    transform: translateX(-118px);
   }
   .card:hover .face1{
     background: #4b0303;

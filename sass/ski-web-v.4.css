@@ -78,7 +78,7 @@ body {
 #chk {
   position: absolute;
   visibility: hidden;
-  z-index: -10;
+  z-index: 10;
 }
 
 @media screen and (max-width: 950px) {
@@ -456,7 +456,7 @@ body {
             flex-direction: row;
   }
   .face {
-    width: 250px;
+    width: 236px;
     height: 80px;
     -webkit-transition: .5s;
     transition: .5s;
@@ -479,8 +479,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
-    -webkit-transform: translateX(125px);
-            transform: translateX(125px);
+    -webkit-transform: translateX(118px);
+            transform: translateX(118px);
   }
   .face2 {
     display: -webkit-box;
@@ -495,8 +495,8 @@ body {
     position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transform: translateX(-125px);
-            transform: translateX(-125px);
+    -webkit-transform: translateX(-118px);
+            transform: translateX(-118px);
   }
   .card:hover .face1 {
     background: #4b0303;
