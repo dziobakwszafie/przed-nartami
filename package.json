@@ -1,19 +1,16 @@
 {
-  "name": "przednartami",
+  "name": "cwiczenia",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dziobakwszafie/PrzedNartami.git"
-  },
+  "keywords": [],
   "author": "dziobakwszafie",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dziobakwszafie/PrzedNartami/issues"
-  },
-  "homepage": "https://github.com/dziobakwszafie/PrzedNartami#readme"
+  "homepage": "https://dziobakwszafie.github.io/PrzedNartami/",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
