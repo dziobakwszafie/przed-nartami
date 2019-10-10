@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "dziobakwszafie",
   "license": "ISC",
-  "homepage": "https://dziobakwszafie.github.io/PrzedNartami/",
+  "homepage": "https://dziobakwszafie.github.io/PrzedNartami",
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
