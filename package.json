@@ -1,19 +1,22 @@
 {
   "name": "przednartami",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dziobakwszafie/PrzedNartami.git"
   },
-  "author": "dziobakwszafie\u001b[A\u001b[A\u001b[A\u001b[B\u001b[B\u001b[B",
-  "license": "MIT",
+  "author": "dziobakwszafie",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dziobakwszafie/PrzedNartami/issues"
   },
-  "homepage": "https://github.com/dziobakwszafie/PrzedNartami#readme"
+  "homepage": "https://dziobakwszafie.github.io/przednartami",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
