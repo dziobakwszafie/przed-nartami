@@ -148,7 +148,7 @@ body {
   font-size: 0.8em;
 }
 
-/*parallaxy*/
+/*parallaxes*/
 .parallax-window-header {
   height: 400px;
   background: transparent;
@@ -169,11 +169,12 @@ body {
 }
 
 .parallax2 {
-  background-image: url("dist/img/background1.jpg");
+  background-image: url("img/background1.jpg");
 }
 
 .parallax3 {
-  background-image: url("dist/img/background2.jpg");
+  background-image: url("img/background2.jpg");
+  z-index: 1;
 }
 
 /*intro*/
