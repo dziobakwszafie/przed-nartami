@@ -11,6 +11,7 @@ body {
   font-size: 20px;
   background: #2d3436;
   color: #ffffff;
+  line-height: 1.2em;
 }
 
 /*nagłówek*/
@@ -142,6 +143,10 @@ body {
 
 .text p {
   font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: left;
 }
 
 .text li {
@@ -348,6 +353,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  line-height: 1em;
 }
 
 .card {
