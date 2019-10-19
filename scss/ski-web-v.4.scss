@@ -8,6 +8,7 @@ body {
   font-size: 20px;
   background: #2d3436;
   color: #ffffff;
+  line-height: 1.2em;
 }
 @mixin center-ic($flex, $align, $justify){
   display: $flex;
@@ -125,6 +126,8 @@ $bgFaceColor: #383838;
   }
   p{
     font-size: $textMedium;
+    display: flex;
+    justify-self: left;
   }
   li{
     font-size: $textMedium;
@@ -270,6 +273,7 @@ $bgFaceColor: #383838;
   position: relative;
   justify-content: space-around;
   flex-wrap: wrap;
+  line-height: 1em;
 }
 .card{
   margin: 5px;
