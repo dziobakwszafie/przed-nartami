@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+  //Doesn't work in Internet Explorer, Edge(old) or Safari.
+}
 body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
@@ -349,6 +353,51 @@ $bgFaceColor: #383838;
     position: relative;
     box-sizing: border-box;
     transform: translateX(-118px);
+  }
+  .card:hover .face1{
+    background: #4b0303;
+    transform: translateY(0);
+    border-radius: 0px;
+    cursor: pointer;
+    border-right: solid 4px $lineColor;
+    border-bottom: none;
+  }
+  .card:hover .face2{
+    background: $bgFaceColor;
+    transform: translateY(0);
+    border-radius: 0px;
+    cursor: pointer;
+  }
+}
+//second breakpoint
+@media screen and (max-width:500px){
+  .cont-card{
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+    height: 120px;
+    font-size: $textMedium;
+    display: flex;
+    flex-direction: row;
+  }
+  .face{
+    width: 180px;
+    height: 120px;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+  }
+  .face1{
+    @include center-ic(flex, center, center);
+    position: relative;
+    transform: translateX(90px);
+  }
+  .face2{
+    @include center-ic(flex, center, center);
+    position: relative;
+    box-sizing: border-box;
+    transform: translateX(-90px);
   }
   .card:hover .face1{
     background: #4b0303;
