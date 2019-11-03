@@ -48,6 +48,7 @@ $bgFaceColor: #383838;
   line-height: 100px;
   color: $fontColor;
   text-transform: uppercase;
+  float: left;
 }
 .nav-links{
   line-height: 100px;
@@ -253,11 +254,6 @@ $bgFaceColor: #383838;
     font-size: $textMedium;
     margin: 20px;
   }
-}
-#calc-icon{
-  width: 100px;
-  height: auto;
-  margin-right: 2vw;
 }
 .calc{
   @include center-ii(flex, center, center);
