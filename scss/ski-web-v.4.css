@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
@@ -504,6 +508,88 @@ body {
             box-sizing: border-box;
     -webkit-transform: translateX(-118px);
             transform: translateX(-118px);
+  }
+  .card:hover .face1 {
+    background: #4b0303;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    border-radius: 0px;
+    cursor: pointer;
+    border-right: solid 4px #161616;
+    border-bottom: none;
+  }
+  .card:hover .face2 {
+    background: #383838;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    border-radius: 0px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cont-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    height: 120px;
+    font-size: 0.8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .face {
+    width: 180px;
+    height: 120px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .face1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px);
+  }
+  .face2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(-90px);
+            transform: translateX(-90px);
   }
   .card:hover .face1 {
     background: #4b0303;
