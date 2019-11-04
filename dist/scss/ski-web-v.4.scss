@@ -33,11 +33,14 @@ $hoverColor: #821186;
 $bgColor: #2d3436;
 $lineColor: #161616;
 $bgFaceColor: #383838;
+$grey_boxColor: #193549;
+$pozorColor: #4b0303;
 
 
 
 
-/*nagłówek*/
+
+//header
 .header-box{
   @include center-ic(flex, center, space-around);
   height: 100px;
@@ -120,7 +123,10 @@ $bgFaceColor: #383838;
   }
 }
 
-/*text size*/
+
+
+
+//text size
 .text{
   @include center-ii(flex, center, center);
   padding: 20px;
@@ -131,17 +137,24 @@ $bgFaceColor: #383838;
   }
   p{
     font-size: $textMedium;
-    display: flex;
-    justify-self: left;
   }
   li{
     font-size: $textMedium;
   }
+  ul{
+    padding-left: 20px;
+  }
+}
+.grey_box{
+  background: $grey_boxColor;
+  border-radius: 10px;
+  padding: 10px 50px;
 }
 
 
 
-/*parallaxes*/
+
+//parallaxes
 .parallax-window-header {
   height: 400px;
   background: transparent;
@@ -168,7 +181,9 @@ $bgFaceColor: #383838;
 
 
 
-/*intro*/
+
+
+//intro
 .intro{
   @include center-ii(flex, center, center);
   margin: auto;
@@ -210,9 +225,12 @@ $bgFaceColor: #383838;
 
 
 
-/*basics*/
-/*skis*/
-/*service*/
+
+  
+
+//basics
+//skis
+//service
 .basics,
 .skis,
 .service{
@@ -224,7 +242,7 @@ $bgFaceColor: #383838;
   flex-direction: column;
 }
 #long-line{
-  width: 50vw;
+  width: 100%;
   height: 4px;
   background: $lineColor;
   border-radius: 3px;
@@ -263,6 +281,34 @@ $bgFaceColor: #383838;
   min-width: 400px;
   font-size: $textMedium;
   flex-direction: column;
+}
+.small_box{
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  font-size: $textMedium;
+  padding: 3px;
+  border-radius: 10px;
+}
+.t1,
+.t2,
+.t3{
+  max-width: 290px;
+  text-align: center;
+  margin: 0 20px;
+}
+@media screen and (max-width:1020px){
+  .small_box{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .t1,
+  .t2,
+  .t3{
+    max-width: 100%;
+    height: 80px;
+  }
 }
 .box1{
   margin-top: 10px;
@@ -449,7 +495,7 @@ $bgFaceColor: #383838;
   transition: 2s;
 }
 .box4{
-  background: #4b0303;
+  background: $pozorColor;
   width: 100%;
   padding: 15px;
   font-size: $textMedium;
