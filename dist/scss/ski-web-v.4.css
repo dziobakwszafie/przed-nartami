@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +17,7 @@ body {
   line-height: 1.2em;
 }
 
-/*nagłówek*/
+/*navbar*/
 .header-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,9 +310,46 @@ body {
   margin-bottom: 20px;
 }
 
-.calc-title p {
+.small_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1000px;
   font-size: 0.8em;
-  margin: 20px;
+  background: #383838;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.t1,
+.t2,
+.t3 {
+  max-width: 290px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 1020px) {
+  .small_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80vw;
+  }
+  .t1,
+  .t2,
+  .t3 {
+    max-width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .calc {
@@ -460,6 +496,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 5px 0;
   }
   .face {
     width: 236px;

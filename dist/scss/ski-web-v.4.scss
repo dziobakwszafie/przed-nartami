@@ -37,7 +37,7 @@ $bgFaceColor: #383838;
 
 
 
-/*nagłówek*/
+/*navbar*/
 .header-box{
   @include center-ic(flex, center, space-around);
   height: 100px;
@@ -250,10 +250,35 @@ $bgFaceColor: #383838;
     font-size: $textBig;
     margin-bottom: 20px;
   }
-  p{
-    font-size: $textMedium;
-    margin: 20px;
+}
+.small_box{
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  font-size: $textMedium;
+  background: $bgFaceColor;
+  padding: 3px;
+  border-radius: 10px;
+}
+.t1,
+.t2,
+.t3{
+  max-width: 290px;
+  text-align: center;
+  margin: 0 20px;
+}
+@media screen and (max-width:1020px){
+  .small_box{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
   }
+  .t1,
+  .t2,
+  .t3{
+    max-width: 100%;
+    margin-top: 10px;
+}
 }
 .calc{
   @include center-ii(flex, center, center);
@@ -331,6 +356,7 @@ $bgFaceColor: #383838;
     font-size: $textMedium;
     display: flex;
     flex-direction: row;
+    margin: 5px 0;
   }
   .face{
     width: 236px;

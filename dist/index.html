@@ -23,11 +23,11 @@
                 <i class="fas fa-ellipsis-h"></i>
 			</label>
 			<ul class="nav-links">
-				<a href="#intro">WSTĘP</a>
-				<a href="#basics">PODSTAWY</a>
-				<a href="#skis">DOBÓR SPRZĘTU</a>
-				<a href="#service">SERWIS</a>
-				<a href="#calc">KALKULATOR</a>
+				<a href="#intro" onclick="uncheck()">WSTĘP</a>
+				<a href="#basics" onclick="uncheck()">PODSTAWY</a>
+				<a href="#skis" onclick="uncheck()">DOBÓR SPRZĘTU</a>
+				<a href="#service" onclick="uncheck()">SERWIS</a>
+				<a href="#calc" onclick="uncheck()" >KALKULATOR</a>
 				<label for="chk" class="hide-menu-btn">
 					<i class="fas fa-times"></i>
 				</label>
@@ -221,13 +221,17 @@
 		<!--calc-->
 		<div class="calc-title">
 			<h2><img id="ski-icon" src="img/Ski.ico" alt="ski icon">Kalkulator siły wypięcia wiązania</h2>
-			<p>Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić kilka czynników.
-			<br>
-			Przede wszystkim musisz przyporządkowac się do jednej z grup zaawansowania. 
-			<br>
-			W tym celu przeczytaj opisy poszczególnych opcji. A następnie wyklikaj pozostałe parametry.
-			</p>
-			<button class="navi-btn"><a href="#top"id="navi-btn_1">DO GÓRY</a></button>
+			<div class="small_box">
+				<div class="t1">
+					Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić kilka czynników, indywidualnych dla każdej osoby.
+				</div>
+				<div class="t2">
+					Przede wszystkim musisz przyporządkowac się do jednej z grup zaawansowania, pokazanych poniżej. Po najechaniu kursorem rozwinie się krótki opis danej kategorii. 
+				</div>
+				<div class="t3">
+					Parametry wybieraj z list rozwijanych, po wybraniu wszystkich, automatycznie pokaże się wynik. Jeżeli zauważysz X, to znaczy, że niestety nie mieścisz sie w żadnej z grup. 
+				</div>
+			</div>
 		</div>
 		<div class="calc" id="calc">
 			<div class="box1">
