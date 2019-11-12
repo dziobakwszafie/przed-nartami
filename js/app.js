@@ -1,3 +1,10 @@
+function uncheck() {
+    const inputs = document.querySelector('#chk');
+    inputs.checked = false;
+  }
+
+
+
 function calc() {
     const height = parseInt(document.querySelector("#height").value);
     const weight = parseInt(document.querySelector("#weight").value);
