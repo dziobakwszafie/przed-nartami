@@ -127,7 +127,6 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: $grey_boxColor;
   padding: 30px;
   border-radius: 50%;
   i{
@@ -138,11 +137,7 @@ body {
     color: $pozorColor;
   }
 }
-@media screen and (max-width:1150px){
-  .scroll-top{
-    padding: 15px;
-  }
-}
+
 
 
 
