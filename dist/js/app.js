@@ -4,7 +4,6 @@ function uncheck() {
   }
 
 
-
 function calc() {
     const height = parseInt(document.querySelector("#height").value);
     const weight = parseInt(document.querySelector("#weight").value);
@@ -41,5 +40,7 @@ function calc() {
 }
 
 calc(); 
+
+document.querySelectorAll('select').addEventListener('touchstart',calc);
 
 // https://codepen.io/esedic/pen/XgJNQv

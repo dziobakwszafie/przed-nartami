@@ -7,13 +7,6 @@ html{
   scroll-behavior: smooth;
   //Doesn't work in Internet Explorer, Edge(old) or Safari.
 }
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  background: #2d3436;
-  color: #ffffff;
-  line-height: 1.2em;
-}
 @mixin center-ic($flex, $align, $justify){
   display: $flex;
   align-items: $align;
@@ -30,11 +23,20 @@ $textBig: 1.5em;
 
 $fontColor: #ffffff;
 $hoverColor: #821186;
-$bgColor: #2d3436;
+$bgColor: #282828;
 $lineColor: #161616;
 $bgFaceColor: #383838;
 $grey_boxColor: #193549;
 $pozorColor: #4b0303;
+$naviColor: #0c1e31;
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  background: $bgColor;
+  color: $fontColor;
+  line-height: 1.2em;
+}
 
 
 
@@ -43,7 +45,7 @@ $pozorColor: #4b0303;
 .header-box{
   @include center-ic(flex, center, space-around);
   height: 100px;
-  background: #0c1e31;
+  background: $naviColor;
   padding: 0;
 }
 .logo{
@@ -100,7 +102,7 @@ $pozorColor: #4b0303;
     position: fixed;
     width: 100%;
     height: 100vh;
-    background:#0c1e31;
+    background:$naviColor;
     right: -100%;
     top: 0;
     text-align: center;
@@ -119,6 +121,26 @@ $pozorColor: #4b0303;
   }
   #chk:checked ~ .nav-links{
     right: 0;
+  }
+}
+.scroll-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $grey_boxColor;
+  padding: 30px;
+  border-radius: 50%;
+  i{
+    color: $lineColor;
+    transform: scale(2);
+  }
+  :hover{
+    color: $pozorColor;
+  }
+}
+@media screen and (max-width:1150px){
+  .scroll-top{
+    padding: 15px;
   }
 }
 
@@ -187,7 +209,6 @@ $pozorColor: #4b0303;
   @include center-ii(flex, center, center);
   margin: auto;
   max-width: 1000px;
-  min-width: 400px;
   flex-direction: column;
 }
 #ski-icon{
@@ -208,14 +229,15 @@ $pozorColor: #4b0303;
     border: $lineColor solid 2px;
     padding: 10px;
     margin: 20px;
+    transition: .4s;
     &:hover{
       background: $hoverColor;
     }
   }
 }
 #navi-btn_1{
-  background: #161694;    
-  border: #161694 solid 2px;
+  background: $naviColor;    
+  border: $naviColor solid 2px;
     &:hover{
       background: $hoverColor;
       border: $hoverColor solid 2px;
@@ -237,11 +259,10 @@ $pozorColor: #4b0303;
   width: 100%;
   margin: auto;
   max-width: 1000px;
-  min-width: 400px;
   flex-direction: column;
 }
 #long-line{
-  width: 100%;
+  width: 90%;
   height: 4px;
   background: $lineColor;
   border-radius: 3px;
@@ -253,6 +274,11 @@ $pozorColor: #4b0303;
   background: $lineColor;
   border-radius: 3px;
 }
+
+
+
+
+
 
 
 
@@ -274,15 +300,10 @@ $pozorColor: #4b0303;
   max-width: 1000px;
   font-size: $textMedium;
   background: $bgFaceColor;
-  padding: 3px;
   border-radius: 10px;
-}
-.t1,
-.t2,
-.t3{
-  max-width: 290px;
-  text-align: center;
-  margin: 0 20px;
+  p{
+    padding: 5px 20px;
+  }
 }
 @media screen and (max-width:1020px){
   .small_box{
@@ -290,49 +311,14 @@ $pozorColor: #4b0303;
     flex-direction: column;
     width: 80vw;
   }
-  .t1,
-  .t2,
-  .t3{
-    max-width: 100%;
-    margin-top: 10px;
-}
 }
 .calc{
   @include center-ii(flex, center, center);
   width: 100%;
   margin: auto;
   max-width: 1000px;
-  min-width: 400px;
   font-size: $textMedium;
   flex-direction: column;
-}
-.small_box{
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 1000px;
-  font-size: $textMedium;
-  padding: 3px;
-  border-radius: 10px;
-}
-.t1,
-.t2,
-.t3{
-  max-width: 290px;
-  text-align: center;
-  margin: 0 20px;
-}
-@media screen and (max-width:1020px){
-  .small_box{
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-  }
-  .t1,
-  .t2,
-  .t3{
-    max-width: 100%;
-    height: 80px;
-  }
 }
 .box1{
   margin-top: 10px;
@@ -524,6 +510,9 @@ $pozorColor: #4b0303;
   width: 100%;
   padding: 15px;
   font-size: $textMedium;
+  p{
+    margin-top: 1.5em;
+  }
 }
 
 
