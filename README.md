@@ -1,6 +1,7 @@
 # Przed-nartami
 
 Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
+For season 19/20.
 
 ## Getting Started 
 
