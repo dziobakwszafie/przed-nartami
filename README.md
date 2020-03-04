@@ -1,4 +1,4 @@
-# Ski shop
+# Przed-nartami
 
 Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
 
