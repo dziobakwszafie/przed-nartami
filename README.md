@@ -1,6 +1,21 @@
-# Przed nartami 
+# Ski shop
 
-Project of guidebook for skiers. 
+Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
+
+## Getting Started 
+
+Live version you can find here: https://dziobakwszafie.github.io/przed-nartami/
+
+### To run it locally
+
+Get the repo
+```
+git clone https://dziobakwszafie.github.io/przed-nartami/
+```
+or 
+```
+download ZIP file
+```
 
 ## Built With
 
@@ -10,6 +25,4 @@ Project of guidebook for skiers.
 
 ## Current Status
 
-v.1.x finished 
-
-redesign in future (maybe)
+Finished 
