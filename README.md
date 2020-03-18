@@ -26,4 +26,6 @@ download ZIP file
 
 ## Current Status
 
-Finished 
+:heavy_check_mark: v.1 finished 
+
+> redesign planned - move to [v.2](https://github.com/dziobakwszafie/przed-nartami-v.2)
