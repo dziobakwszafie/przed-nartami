@@ -1,22 +1,26 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
   //Doesn't work in Internet Explorer, Edge(old) or Safari.
 }
-@mixin center-ic($flex, $align, $justify){
+
+@mixin center-ic($flex, $align, $justify) {
   display: $flex;
   align-items: $align;
   justify-content: $justify;
 }
-@mixin center-ii($flex, $align, $justify){
+
+@mixin center-ii($flex, $align, $justify) {
   display: $flex;
   align-items: $align;
   justify-items: $justify;
 }
+
 $textSmall: .6em;
 $textMedium: .8em;
 $textBig: 1.5em;
@@ -38,102 +42,146 @@ body {
   line-height: 1.2em;
 }
 
+/*parallax*/
+.parallax-container {
+  height: 400px;
+}
 
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
 
+.parallax-container .parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallax-container .parallax img {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 /*navbar*/
-.header-box{
+.header-box {
   @include center-ic(flex, center, space-around);
   height: 100px;
   background: $naviColor;
   padding: 0;
 }
-.logo{
+
+.logo {
   line-height: 100px;
   color: $fontColor;
   text-transform: uppercase;
   float: left;
 }
-.nav-links{
+
+.nav-links {
   line-height: 100px;
 }
-.nav-links a{
+
+.nav-links a {
   padding: 0 20px;
   color: $fontColor;
   text-decoration: none;
   font-size: $textMedium;
   transition: .4s;
 }
+
 .show-menu-btn,
-.hide-menu-btn{
+.hide-menu-btn {
   transition: .4s;
   font-size: $textBig;
   cursor: pointer;
   display: none;
 }
-.show-menu-btn{
+
+.show-menu-btn {
   float: right;
-  i{
+
+  i {
     line-height: 100px;
     color: $fontColor;
   }
 }
-.hide-menu-btn{
-  i{
+
+.hide-menu-btn {
+  i {
     color: $fontColor;
   }
 }
+
 .nav-links a:hover,
 .show-menu-btn:hover,
-.hide-menu-btn:hover{
+.hide-menu-btn:hover {
   color: $hoverColor;
 }
-#chk{
+
+#chk {
   position: absolute;
   visibility: hidden;
   z-index: 10;
 }
-@media screen and (max-width:950px){
+
+@media screen and (max-width:950px) {
+
   .show-menu-btn,
-  .hide-menu-btn{
+  .hide-menu-btn {
     display: block;
   }
-  .nav-links{
+
+  .nav-links {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background:$naviColor;
+    background: $naviColor;
     right: -100%;
     top: 0;
     text-align: center;
     padding: 80px 0;
     line-height: normal;
     transition: .7s;
-    a{
+
+    a {
       display: block;
       padding: 20px;
     }
   }
-  .hide-menu-btn{
+
+  .hide-menu-btn {
     position: absolute;
     top: 40px;
     right: 40px;
   }
-  #chk:checked ~ .nav-links{
+
+  #chk:checked~.nav-links {
     right: 0;
   }
 }
-.scroll-top{
+
+.scroll-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 30px;
   border-radius: 50%;
-  i{
+
+  i {
     color: $lineColor;
     transform: scale(2);
   }
-  :hover{
+
+  :hover {
     color: $pozorColor;
   }
 }
@@ -143,25 +191,30 @@ body {
 
 
 //text size
-.text{
+.text {
   @include center-ii(flex, center, center);
   padding: 20px;
   flex-direction: column;
-  h2{
+
+  h2 {
     @include center-ii(flex, center, center);
     font-size: $textBig;
   }
-  p{
+
+  p {
     font-size: $textMedium;
   }
-  li{
+
+  li {
     font-size: $textMedium;
   }
-  ul{
+
+  ul {
     padding-left: 20px;
   }
 }
-.grey_box{
+
+.grey_box {
   background: $grey_boxColor;
   border-radius: 10px;
   padding: 10px 50px;
@@ -175,10 +228,12 @@ body {
   height: 400px;
   background: transparent;
 }
+
 .parallax-window {
   height: 350px;
   background: transparent;
 }
+
 .parallax2,
 .parallax3 {
   height: 300px;
@@ -187,9 +242,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .parallax2 {
   background-image: url("img/background1.jpg");
 }
+
 .parallax3 {
   background-image: url("img/background2.jpg");
   z-index: 1;
@@ -200,70 +257,78 @@ body {
 
 
 //intro
-.intro{
+.intro {
   @include center-ii(flex, center, center);
   margin: auto;
   max-width: 1000px;
   flex-direction: column;
 }
-#ski-icon{
+
+#ski-icon {
   width: 100px;
   height: auto;
   margin-right: 2vw;
 }
-.navi-btn{
+
+.navi-btn {
   height: 50px;
   background: $bgColor;
   border: solid 1px $bgColor;
   font-weight: bold;
   cursor: pointer;
   margin-bottom: 20px;
-  a{
+
+  a {
     color: $fontColor;
     text-decoration: none;
     border: $lineColor solid 2px;
     padding: 10px;
     margin: 20px;
     transition: .4s;
-    &:hover{
+
+    &:hover {
       background: $hoverColor;
     }
   }
 }
-#navi-btn_1{
-  background: $naviColor;    
+
+#navi-btn_1 {
+  background: $naviColor;
   border: $naviColor solid 2px;
-    &:hover{
-      background: $hoverColor;
-      border: $hoverColor solid 2px;
-    }
+
+  &:hover {
+    background: $hoverColor;
+    border: $hoverColor solid 2px;
   }
+}
 
 
 
 
-  
+
 
 //basics
 //skis
 //service
 .basics,
 .skis,
-.service{
+.service {
   @include center-ii(flex, center, center);
   width: 100%;
   margin: auto;
   max-width: 1000px;
   flex-direction: column;
 }
-#long-line{
+
+#long-line {
   width: 90%;
   height: 4px;
   background: $lineColor;
   border-radius: 3px;
   margin-bottom: 5px;
 }
-#line{
+
+#line {
   width: 40vw;
   height: 4px;
   background: $lineColor;
@@ -278,36 +343,41 @@ body {
 
 
 /*calc*/
-.calc-title{
+.calc-title {
   @include center-ic(flex, center, center);
   width: 100%;
   flex-direction: column;
   margin-top: 20px;
-  h2{
-      @include center-ii(flex, center, center);
+
+  h2 {
+    @include center-ii(flex, center, center);
     font-size: $textBig;
     margin-bottom: 20px;
   }
 }
-.small_box{
+
+.small_box {
   display: flex;
   flex-flow: row wrap;
   max-width: 1000px;
   font-size: $textMedium;
   background: $bgFaceColor;
   border-radius: 10px;
-  p{
+
+  p {
     padding: 5px 20px;
   }
 }
-@media screen and (max-width:1020px){
-  .small_box{
+
+@media screen and (max-width:1020px) {
+  .small_box {
     display: flex;
     flex-direction: column;
     width: 80vw;
   }
 }
-.calc{
+
+.calc {
   @include center-ii(flex, center, center);
   width: 100%;
   margin: auto;
@@ -315,10 +385,12 @@ body {
   font-size: $textMedium;
   flex-direction: column;
 }
-.box1{
+
+.box1 {
   margin-top: 10px;
 }
-.cont-card{
+
+.cont-card {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -326,24 +398,28 @@ body {
   flex-wrap: wrap;
   line-height: 1em;
 }
-.card{
+
+.card {
   margin: 5px;
   position: relative;
   font-size: $textMedium;
   display: flex;
   flex-direction: column;
 }
-.face{
+
+.face {
   width: 150px;
   height: 150px;
   transition: .5s;
   display: flex;
   flex-direction: column;
 }
-#hover-desc{
+
+#hover-desc {
   margin: 5px;
 }
-.face1{
+
+.face1 {
   @include center-ic(flex, center, center);
   position: relative;
   background: $bgFaceColor;
@@ -351,7 +427,8 @@ body {
   border-radius: 10px;
   transform: translateY(75px);
 }
-.face2{
+
+.face2 {
   @include center-ic(flex, center, center);
   position: relative;
   background: $bgFaceColor;
@@ -359,50 +436,58 @@ body {
   border-radius: 10px;
   transform: translateY(-75px);
 }
-.card:hover .face1{
+
+.card:hover .face1 {
   background: #4b0303;
   transform: translateY(0);
   border-radius: 0px;
   cursor: pointer;
   border-bottom: solid 4px $lineColor;
 }
-.card:hover .face2{
+
+.card:hover .face2 {
   background: $bgFaceColor;
   transform: translateY(0);
   border-radius: 0px;
   cursor: pointer;
 }
-@media screen and (max-width:825px){
-  .cont-card{
+
+@media screen and (max-width:825px) {
+  .cont-card {
     display: flex;
     flex-direction: column;
   }
-  .card{
+
+  .card {
     height: 80px;
     font-size: $textMedium;
     display: flex;
     flex-direction: row;
     margin: 5px 0;
   }
-  .face{
+
+  .face {
     width: 236px;
     height: 80px;
     transition: .5s;
     display: flex;
     flex-direction: column;
   }
-  .face1{
+
+  .face1 {
     @include center-ic(flex, center, center);
     position: relative;
     transform: translateX(118px);
   }
-  .face2{
+
+  .face2 {
     @include center-ic(flex, center, center);
     position: relative;
     box-sizing: border-box;
     transform: translateX(-118px);
   }
-  .card:hover .face1{
+
+  .card:hover .face1 {
     background: #4b0303;
     transform: translateY(0);
     border-radius: 0px;
@@ -410,44 +495,51 @@ body {
     border-right: solid 4px $lineColor;
     border-bottom: none;
   }
-  .card:hover .face2{
+
+  .card:hover .face2 {
     background: $bgFaceColor;
     transform: translateY(0);
     border-radius: 0px;
     cursor: pointer;
   }
 }
+
 //second breakpoint
-@media screen and (max-width:500px){
-  .cont-card{
+@media screen and (max-width:500px) {
+  .cont-card {
     display: flex;
     flex-direction: column;
   }
-  .card{
+
+  .card {
     height: 120px;
     font-size: $textMedium;
     display: flex;
     flex-direction: row;
   }
-  .face{
+
+  .face {
     width: 180px;
     height: 120px;
     transition: .5s;
     display: flex;
     flex-direction: column;
   }
-  .face1{
+
+  .face1 {
     @include center-ic(flex, center, center);
     position: relative;
     transform: translateX(90px);
   }
-  .face2{
+
+  .face2 {
     @include center-ic(flex, center, center);
     position: relative;
     box-sizing: border-box;
     transform: translateX(-90px);
   }
-  .card:hover .face1{
+
+  .card:hover .face1 {
     background: #4b0303;
     transform: translateY(0);
     border-radius: 0px;
@@ -455,39 +547,45 @@ body {
     border-right: solid 4px $lineColor;
     border-bottom: none;
   }
-  .card:hover .face2{
+
+  .card:hover .face2 {
     background: $bgFaceColor;
     transform: translateY(0);
     border-radius: 0px;
     cursor: pointer;
   }
 }
-.big-box{
+
+.big-box {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.box2{
+
+.box2 {
   display: flex;
   flex-direction: column;
   flex: 2;
   margin: 10px 10px 10px 10px;
 }
+
 .level,
 .height,
 .weight,
 .age,
-.boot{
+.boot {
   background: $bgColor;
   margin: 10px;
   border: solid 1px $bgFaceColor;
   color: $fontColor;
   border-radius: 5px;
-  &:focus { 
-  outline:0 !important; 
+
+  &:focus {
+    outline: 0 !important;
   }
 }
-.box3{
+
+.box3 {
   @include center-ic(flex, center, center);
   background: $fontColor;
   flex: 1;
@@ -496,24 +594,27 @@ body {
   color: #0c1e31;
   font-size: 5em;
 }
-#result{
+
+#result {
   font-size: $textBig;
   transition: 2s;
 }
-.box4{
+
+.box4 {
   background: $pozorColor;
   width: 100%;
   padding: 15px;
   font-size: $textMedium;
-  p{
+
+  p {
     margin-top: 1.5em;
   }
 }
 
 
 
-/*footer*/ 
-.madeby{
+/*footer*/
+.madeby {
   @include center-ic(flex, center, center);
   width: 100%;
   background: $bgFaceColor;
