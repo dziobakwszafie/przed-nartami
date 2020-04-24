@@ -29,4 +29,4 @@ download ZIP file
 
 ## Current Status
 
-:heavy_plus_sign: under develope
+:heavy_check_mark: finished
