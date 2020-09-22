@@ -3,6 +3,10 @@
 Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
 For season 19/20.
 
+## Current Status
+
+:heavy_check_mark: finished
+
 ## Getting Started
 
 Live version you can find here: https://dziobakwszafie.github.io/przed-nartami/
@@ -26,7 +30,3 @@ download ZIP file
 - HTML5
 - CSS3 + Sass
 - Javascript
-
-## Current Status
-
-:heavy_check_mark: finished
