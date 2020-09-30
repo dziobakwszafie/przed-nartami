@@ -43,7 +43,7 @@ body {
 }
 
 /*navbar*/
-.header-box {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +55,12 @@ body {
   height: 100px;
   background: #0f3460;
   padding: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .logo {
