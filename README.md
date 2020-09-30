@@ -3,6 +3,8 @@
 Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
 For season 19/20.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/przed-nartami/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/przed-nartami)
+
 ## Current Status
 
 :heavy_check_mark: finished
