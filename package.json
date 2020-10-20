@@ -16,9 +16,7 @@
     "stylelint-scss": "^3.18.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "deploy": "gh-pages -d src",
     "css:fix": "stylelint --fix ./src/**/*.scss"
   },
   "repository": {

@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -33,7 +34,7 @@ section {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 600px;
+  height: 400px;
 }
 
 .parallax-container .parallax {
@@ -370,6 +371,59 @@ li {
     font-size: 15px;
     line-height: 23px;
   }
+}
+
+/***** calc *****/
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2vw;
+  border: solid 0.2vw #000;
+  border-radius: 5px;
+}
+
+.columnOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.columnOne select {
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.columnTwo div {
+  min-width: 200px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #0e9aa7;
+  font-size: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.warning {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #bb2205;
+  color: #fff;
 }
 
 /* footer */
