@@ -344,6 +344,10 @@ li {
   padding: 2vw;
   border: solid 0.2vw $textColor1;
   border-radius: 5px;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .columnOne {
@@ -360,6 +364,7 @@ li {
 .columnTwo {
   div {
     min-width: 200px;
+    min-height: 200px;
     height: 100%;
     border-radius: 5px;
     background-color: $titleColor6;
