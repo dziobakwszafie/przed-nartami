@@ -54,6 +54,7 @@ $bgColor3: #0f3460;
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -70,7 +71,7 @@ section {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 600px;
+  height: 400px;
 }
 
 .parallax-container .parallax {
@@ -334,6 +335,46 @@ li {
     font-size: $textSize3;
     line-height: $lineHeight3;
   }
+}
+
+/***** calc *****/
+.calculator {
+  display: flex;
+  justify-content: space-around;
+  padding: 2vw;
+  border: solid 0.2vw $textColor1;
+  border-radius: 5px;
+}
+
+.columnOne {
+  display: flex;
+  flex-direction: column;
+
+  select {
+    margin: 5px;
+    padding: 5px;
+    font-size: $textSize2;
+  }
+}
+
+.columnTwo {
+  div {
+    min-width: 200px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: $titleColor6;
+    font-size: 100px;
+
+    @include center-ic(flex, center, center);
+  }
+}
+
+.warning {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: $titleColor3;
+  color: $textColor2;
 }
 
 /* footer */
