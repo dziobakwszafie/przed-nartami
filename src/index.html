@@ -12,7 +12,9 @@
       property="description"
       content="Mały niezbędnik dla każdego początkujacego jak i zaawansowanego narciarza."
     />
+    <!--Styling-->
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/calcStyles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap"
       rel="stylesheet"
@@ -21,8 +23,8 @@
       src="https://kit.fontawesome.com/7517802c18.js"
       crossorigin="anonymous"
     ></script>
+    <!--Javascript-->
     <script src="./js/app.js"></script>
-    <!--Materialise-->
     <script src="./js/materialize.min.js"></script>
     <script src="./js/parallax.js"></script>
   </head>
@@ -87,7 +89,7 @@
         <div class="parallax"><img src="img/background1.jpg" /></div>
       </div>
       <!--basics-->
-      <div class="basics" id="basics">
+      <section id="basics">
         <div class="text">
           <h2>Od czego w ogóle zacząć temat?</h2>
           <p>
@@ -141,9 +143,9 @@
             stoku, to lepiej go zmień.
           </p>
         </div>
-      </div>
+      </section>
       <!--skis-->
-      <div class="skis" id="skis">
+      <section id="skis">
         <div class="text">
           <h2>Wybór sprzętu</h2>
           <h3>Wybór nart</h3>
@@ -292,13 +294,13 @@
             przypierdzieli zwłokami o ziemię przy większej prędkości.
           </p>
         </div>
-      </div>
+      </section>
 
       <div class="parallax-container">
         <div class="parallax"><img src="img/background2.jpg" /></div>
       </div>
       <!--service-->
-      <div class="service" id="service">
+      <section id="service">
         <div class="text">
           <h2>Serwis nart</h2>
           <h3>Po co w ogóle serwisować narty?</h3>
@@ -335,8 +337,7 @@
             <li>(dodatkowo) wygrzewanie ślizgu</li>
             <li>no i inne bajery jak jesteś jakimś pro koksem</li>
           </ul>
-        </div>
-        <div class="text">
+
           <h3>To teraz małe rozwinięcie co i po co.</h3>
           <p>
             Struktura ślizgu. To ten wzorek jaki masz na ślizgu, takie małe
@@ -488,14 +489,14 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
       <div class="parallax-container">
         <div class="parallax"><img src="img/background3.jpg" /></div>
       </div>
       <!--calc-->
-      <div class="calc-title" id="calc">
-        <h2>Kalkulator siły wypięcia wiązania</h2>
-        <div class="small_box">
+      <section id="calc">
+        <div class="text">
+          <h3>Kalkulator siły wypięcia wiązania</h3>
           <p>
             Aby okreslić wartość jaką ustawiamy na wiazaniu, należy uwzglednić
             kilka czynników, indywidualnych dla każdej osoby.
@@ -505,205 +506,132 @@
             zaawansowania, pokazanych poniżej. Po najechaniu kursorem rozwinie
             się krótki opis danej kategorii.
           </p>
+          <h4>Typy narciarzy</h4>
+          <ul>
+            <li>
+              <b>Świeżak</b>
+              - pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie
+              jesteś zbyt nachalny w tych oczekiwaniach. Jeździsz powoli i
+              ostrożnie, po ratrakowanych stokach.
+            </li>
+            <li>
+              <b>Niedzielny Janusz</b>
+              - ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i
+              dziczysz aż do otwartego złamania. Ewentulanie jeździsz już trochę
+              ale bez szaleństw i niezbyt szybko.
+            </li>
+
+            <li>
+              <b>Zwykły ludź</b>
+              - pakujesz w niedziele kaszojady i żonę do rodzinnej Skody Octavii
+              i ciśniesz na Biały Krzyż. Jeździsz w miarę dobrze i czasem
+              szybciej. Czasem zjedziesz poza trasę.
+            </li>
+            <li>
+              <b>Dzik</b>
+              - parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię
+              janusze co blokują Golgotę jadąc ześlizgiem. Ciśniesz agresywnie
+              po stromym jak i poza trasą.
+            </li>
+            <li>
+              <b>Turbodzik</b>
+              - nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i umisz
+              skręcać z karwinga. Generalnie to siła, prędkość, styl, pyk pyk.
+            </li>
+          </ul>
           <p>
             Parametry wybieraj z list rozwijanych, po wybraniu wszystkich,
             automatycznie pokaże się wynik. Jeżeli zauważysz X, to znaczy, że
             niestety nie mieścisz sie w żadnej z grup.
           </p>
-        </div>
-      </div>
-      <div class="calc">
-        <div class="box1">
-          <div class="cont-card">
-            <div class="card">
-              <div class="face face1">
-                <div class="dots">
-                  <i class="fas fa-minus-circle"></i>
-                  <i class="far fa-circle"></i>
-                  <i class="far fa-circle"></i>
-                </div>
-                <h3>Świeżak</h3>
-              </div>
-              <div class="face face2">
-                <p id="hover-desc">
-                  Pierwszy raz na nartach. Fajnie by było gdybyś przeżył ale nie
-                  jesteś zbyt nachalny w tych oczekiwaniach. Jeździsz powoli i
-                  ostrożnie, po ratrakowanych stokach.
-                </p>
-              </div>
+
+          <div class="calculator">
+            <div class="columnOne">
+              <select class="level" id="level" onChange="calc()">
+                <option selected disabled value="">poziom</option>
+                <option value="-1">ŚWIEŻAK</option>
+                <option value="0">NIEDZIELNY JANUSZ</option>
+                <option value="1">ZWYKŁY LUDŹ</option>
+                <option value="2">DZIK</option>
+                <option value="3">TURBODZIK</option>
+              </select>
+              <select class="height" id="height" onChange="calc()">
+                <option selected disabled value="">wzrost</option>
+                <option value="8">0-148 cm</option>
+                <option value="9">149-157 cm</option>
+                <option value="10">158-166 cm</option>
+                <option value="11">167-178 cm</option>
+                <option value="12">179-194 cm</option>
+                <option value="13">195+ cm</option>
+              </select>
+              <select class="weight" id="weight" onChange="calc()">
+                <option selected disabled value="">waga</option>
+                <option value="1">10-13 kg</option>
+                <option value="2">14-17 kg</option>
+                <option value="3">18-21 kg</option>
+                <option value="4">22-25 kg</option>
+                <option value="5">26-30 kg</option>
+                <option value="6">30-35 kg</option>
+                <option value="7">36-41 kg</option>
+                <option value="8">42-48 kg</option>
+                <option value="9">49-57 kg</option>
+                <option value="10">58-66 kg</option>
+                <option value="11">67-78 kg</option>
+                <option value="12">79-94 kg</option>
+                <option value="13">95+ kg</option>
+              </select>
+              <select class="age" id="age" onChange="calc()">
+                <option selected disabled value="">wiek</option>
+                <option value="-1">0-9 lub 50+ lat</option>
+                <option value="0">10-49 lat</option>
+              </select>
+              <select class="boot" id="boot" onChange="calc()">
+                <option selected disabled value="">długość buta</option>
+                <option value="0">0-230 mm</option>
+                <option value="1">231-250 mm</option>
+                <option value="2">251-270 mm</option>
+                <option value="3">271-290 mm</option>
+                <option value="4">291-310 mm</option>
+                <option value="5">311-330 mm</option>
+                <option value="6">331-350 mm</option>
+                <option value="7">351+ mm</option>
+              </select>
             </div>
-            <div class="card">
-              <div class="face face1">
-                <div class="dots">
-                  <i class="fas fa-circle"></i>
-                  <i class="far fa-circle"></i>
-                  <i class="far fa-circle"></i>
-                </div>
-                <h3>Niedzielny Janusz</h3>
-              </div>
-              <div class="face face2">
-                <p id="hover-desc">
-                  Ze szwagrem kupujesz raz na sezon całodzienny w Szczyrku i
-                  dziczysz aż do otwartego złamania. Ewentulanie jeździsz już
-                  trochę ale bez szaleństw i niezbyt szybko.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="face face1">
-                <div class="dots">
-                  <i class="fas fa-circle"></i>
-                  <i class="fas fa-circle"></i>
-                  <i class="far fa-circle"></i>
-                </div>
-                <h3>Zwykły ludź</h3>
-              </div>
-              <div class="face face2">
-                <p id="hover-desc">
-                  Pakujesz w niedziele kaszojady i żonę do rodzinnej Skody
-                  Octavii i ciśniesz na Biały Krzyż. Jeździsz w miarę dobrze i
-                  czasem szybciej. Czasem zjedziesz poza trasę.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="face face1">
-                <div class="dots">
-                  <i class="fas fa-circle"></i>
-                  <i class="fas fa-circle"></i>
-                  <i class="fas fa-circle"></i>
-                </div>
-                <h3>Dzik</h3>
-              </div>
-              <div class="face face2">
-                <p id="hover-desc">
-                  Parę razy byłeś na tyczkach ale nie pykło. Triggerują Cię
-                  janusze co blokują Golgotę jadąc ześlizgiem. Ciśniesz
-                  agresywnie po stromym jak i poza trasą.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="face face1">
-                <div class="dots">
-                  <i class="fas fa-circle"></i>
-                  <i class="fas fa-circle"></i>
-                  <i class="fas fa-plus-circle"></i>
-                </div>
-                <h3>Turbodzik</h3>
-              </div>
-              <div class="face face2">
-                <p id="hover-desc">
-                  Nakurwiasz slalom jak pojebany. Kasprowy to Świnto Góro i
-                  umisz skręcać z karwinga. Generalnie to siła, prędkość, styl,
-                  pyk pyk.
-                </p>
-              </div>
+            <div class="columnTwo">
+              <div id="result"></div>
             </div>
           </div>
-        </div>
-        <div class="big-box">
-          <div class="box2">
-            <select
-              class="level"
-              id="level"
-              onclick="calc()"
-              ontouchstart="calc()"
-            >
-              <option selected disabled value="">POZIOM</option>
-              <option value="-1">ŚWIEŻAK</option>
-              <option value="0">NIEDZIELNY JANUSZ</option>
-              <option value="1">ZWYKŁY LUDŹ</option>
-              <option value="2">DZIK</option>
-              <option value="3">TURBODZIK</option>
-            </select>
-            <select
-              class="height"
-              id="height"
-              onclick="calc()"
-              ontouchstart="calc()"
-            >
-              <option selected disabled value="">WZROST</option>
-              <option value="8">0-148 cm</option>
-              <option value="9">149-157 cm</option>
-              <option value="10">158-166 cm</option>
-              <option value="11">167-178 cm</option>
-              <option value="12">179-194 cm</option>
-              <option value="13">195+ cm</option>
-            </select>
-            <select
-              class="weight"
-              id="weight"
-              onclick="calc()"
-              ontouchstart="calc()"
-            >
-              <option selected disabled value="">WAGA</option>
-              <option value="1">10-13 kg</option>
-              <option value="2">14-17 kg</option>
-              <option value="3">18-21 kg</option>
-              <option value="4">22-25 kg</option>
-              <option value="5">26-30 kg</option>
-              <option value="6">30-35 kg</option>
-              <option value="7">36-41 kg</option>
-              <option value="8">42-48 kg</option>
-              <option value="9">49-57 kg</option>
-              <option value="10">58-66 kg</option>
-              <option value="11">67-78 kg</option>
-              <option value="12">79-94 kg</option>
-              <option value="13">95+ kg</option>
-            </select>
-            <select class="age" id="age" onclick="calc()" ontouchstart="calc()">
-              <option selected disabled value="">WIEK</option>
-              <option value="-1">0-9 lub 50+ lat</option>
-              <option value="0">10-49 lat</option>
-            </select>
-            <select
-              class="boot"
-              id="boot"
-              onclick="calc()"
-              ontouchstart="calc()"
-            >
-              <option selected disabled value="">DŁ. BUTA</option>
-              <option value="0">0-230 mm</option>
-              <option value="1">231-250 mm</option>
-              <option value="2">251-270 mm</option>
-              <option value="3">271-290 mm</option>
-              <option value="4">291-310 mm</option>
-              <option value="5">311-330 mm</option>
-              <option value="6">331-350 mm</option>
-              <option value="7">351+ mm</option>
-            </select>
-          </div>
-          <div class="box3">
-            <div id="result"></div>
+
+          <div class="warning">
+            <h4>Pozor!</h4>
+            <p>
+              Wartość tutaj obliczona jest wartością teoretyczną i choć jest ona
+              miarodajna to nie należy jej brac bezkrytycznie. Wynika to z
+              faktu, iż sprężyny w wiązaniach wraz z upływem czasu zmieniają
+              swoje parametry.
+            </p>
+            <p>
+              Jeśli masz stare wiązanie obliczona siła może być zbyt niska i
+              wiązanie może wypinać zbyt wcześnie. W celu dokladnego sprawdzenia
+              potrzebnej siły wypięcia najlepiej udać się do porządnego serwisu,
+              gdzie przy pomocy maszyny ustala się siłę wypięcia.
+            </p>
+            <p>
+              Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania
+              kulfona więc polecam pochylić się nad tematem.
+            </p>
+            <p>
+              Kalkulator wykonany w oparciu o wytyczne Salomona na sezon 17/18.
+            </p>
           </div>
         </div>
-        <div class="box4">
-          <h3>Pozor!</h3>
-          <p>
-            Wartość tutaj obliczona jest wartością teoretyczną i choć jest ona
-            miarodajna to nie należy jej brac bezkrytycznie. Wynika to z faktu,
-            iż sprężyny w wiązaniach wraz z upływem czasu zmieniają swoje
-            parametry.
-          </p>
-          <p>
-            Jeśli masz stare wiązanie obliczona siła może być zbyt niska i
-            wiązanie może wypinać zbyt wcześnie. W celu dokladnego sprawdzenia
-            potrzebnej siły wypięcia najlepiej udać się do porządnego serwisu,
-            gdzie przy pomocy maszyny ustala się siłę wypięcia.
-          </p>
-          <p>
-            Jazda ze źle ustawionym wiązaniem jest prostą drogą do złamania
-            kulfona więc polecam pochylić się nad tematem.
-          </p>
-          <p>
-            Kalkulator wykonany w oparciu o wytyczne Salomona na sezon 17/18.
-          </p>
-        </div>
-      </div>
+      </section>
     </main>
     <footer>
-      <div class="madeby">made by dziobakwszafie 2019</div>
+      <div class="madeby">
+        <b>made by dziobakwszafie 2020</b>
+        <i> dziobakwszafie@gmail.com</i>
+      </div>
     </footer>
   </body>
 </html>
