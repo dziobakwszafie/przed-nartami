@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.\r For season 19/20.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "devDependencies": {
     "prettier": "^2.1.1",
     "stylelint": "^13.7.1",
@@ -14,6 +16,9 @@
     "stylelint-scss": "^3.18.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "css:fix": "stylelint --fix ./src/**/*.scss"
   },
   "repository": {
