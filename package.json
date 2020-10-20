@@ -1,16 +1,30 @@
 {
-  "name": "cwiczenia",
+  "name": "przed-nartami",
   "version": "1.0.0",
-  "description": "",
+  "description": "Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.\r For season 19/20.",
   "main": "index.js",
-  "scripts": {
-    "deploy": "gh-pages -d dist"
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^2.1.1",
+    "stylelint": "^13.7.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
   },
-  "keywords": [],
-  "author": "dziobakwszafie",
+  "scripts": {
+    "predeploy": "npm run dist",
+    "deploy": "gh-pages -d dist",
+    "css:fix": "stylelint --fix ./src/**/*.{css,scss,sass}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dziobakwszafie/przed-nartami.git"
+  },
+  "author": "",
   "license": "ISC",
-  "homepage": "https://dziobakwszafie.github.io/PrzedNartami",
-  "dependencies": {
-    "gh-pages": "^2.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/dziobakwszafie/przed-nartami/issues"
+  },
+  "homepage": "https://github.com/dziobakwszafie/przed-nartami#readme"
 }
