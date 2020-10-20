@@ -3,7 +3,7 @@
 Comprehensive guide for all types of skiers. Contains first steps, stuff choosing and service tips.
 For season 19/20.
 
-![Version](hhttps://img.shields.io/badge/Version-Finished-brightgreen)
+![Version](https://img.shields.io/badge/Version-Finished-brightgreen)
 [![CodeFactor](https://www.codefactor.io/repository/github/dziobakwszafie/przed-nartami/badge)](https://www.codefactor.io/repository/github/dziobakwszafie/przed-nartami)
 ![Success](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
 ![David](https://img.shields.io/david/dziobakwszafie/przed-nartami?color=green)
